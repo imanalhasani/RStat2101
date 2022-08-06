@@ -27,7 +27,7 @@ This is RStat2101, the computer laboratory materials of the course STAT2101: Int
 
 This could be the first time you hear about R or RStudio, but do not worry! Here, we will walk you through each of the steps required to begin using R.
 
-![Illustration Credit: Allison Horst.](images/r_learners_encouragement.jpeg){style="width: 800px; heiht: 300px; "}
+![Illustration Credit: Allison Horst.](images/r_learners_encouragement1.png){style="width: 800px; heiht: 300px;  "}
 
 
 
@@ -98,8 +98,8 @@ quiz(
 
 ## Basic Probability
 
-## Confidence Intervals & Hypothesis Tests 
+/*## Confidence Intervals & Hypothesis Tests*/
 
-## Correlation and Regression
+/*## Correlation and Regression*/
 
 

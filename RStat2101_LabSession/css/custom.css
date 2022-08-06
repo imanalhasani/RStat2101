@@ -23,6 +23,7 @@ body {
   font-family: 'Lato', sans-serif;
 	font-size: 18px;
 	font-weight: 400
+	background-color: transparent;
 }
 
 .topicsList .topic {
@@ -70,8 +71,8 @@ pre {
 
 .pagedtable-wrapper {
   border-radius: 0px;
-  border-color: white;
-  background-color: #ececec;
+  border-color: #ececec;
+  background-color: transparent;
 }
 
 a {
@@ -86,31 +87,31 @@ a:hover {
     width: 75%;
     overflow-x: auto;
     padding-bottom: 600px;
-    border-color: white;
+    border-color: transparent;
     padding-left: 20px;
 }
 
 .topicsList .topic {
   font-weight: bold;
-  border-color: gainsboro;
-  background-color: white;
+  border-color: #6f418b;
+  background-color: transparent;
   border-left: none;
   padding-left: 10px;
 }
 
 .topicsList .topic.current {
-  border-color: white;
+  border-color: transparent;
   background-color: #d9cbe1;
-  color: white;
+  color: transparent;
 }
 
 .topicsList .topic:hover {
   background-color: #6f418b;
-  color: white;
+  color: #6f418b;
 }
 
 .pageContent {
-  padding-top: 30px;
+  padding-top: 10px;
 }
 
 .btn {
