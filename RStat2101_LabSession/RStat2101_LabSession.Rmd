@@ -1,18 +1,42 @@
 ---
 title: "RStat2101"
-output: learnr::tutorial
+output: 
+   learnr::tutorial:
+       theme: "sandstone" 
 runtime: shiny_prerendered
 ---
 
 ```{r setup, include=FALSE}
+# packages
 library(learnr)
+library(tidyverse)
+# hide non-exercise code chunks
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+## Introduction
+This is the computer laboratory materials of the course STAT2101: Introduction to Statistics. In this course you learn the exploratory data analysis with RStudio: an integrated development environment for R, a programming language for statistical computing and graphics.
 
-## Topic 1
+<!--<span style="color: royalblue;">RStudio</span>-->
 
-### Exercise 
+This could be the first time you hear about R or RStudio, but do not worry! Here, we will walk you through each of the steps required to begin using R. 
+
+<figure>
+     <img src="images/r_learners_encouragement.jpeg" alt="RLearners"  style="width:100%">
+    <figcaption>Illustration by Allison Horst.</figcaption>
+</figure>
+
+
+
+Let us know what is R?
+
+
+
+
+
+
+
+### Exercise
 
 *Here's a simple exercise with an empty code chunk provided for entering the answer.*
 
@@ -72,4 +96,3 @@ quiz(
   )
 )
 ```
-
