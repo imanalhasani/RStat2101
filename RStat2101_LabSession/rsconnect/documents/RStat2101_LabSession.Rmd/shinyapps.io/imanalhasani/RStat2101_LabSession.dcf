@@ -5,9 +5,9 @@ account: imanalhasani
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 6738039
-bundleId: 6172340
+bundleId: 6174644
 url: https://imanalhasani.shinyapps.io/RStat2101_LabSession/
-when: 1659718034.17731
-lastSyncTime: 1659718034.17732
+when: 1659800367.45702
+lastSyncTime: 1659800367.45703
 asMultiple: FALSE
 asStatic: FALSE

@@ -1,0 +1,149 @@
+
+/* @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,100,300;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,500;1,100;1,300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,400&family=Roboto:wght@100;500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100&family=Merriweather:ital,wght@0,300;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,500;1,100;1,300&display=swap');
+*/
+
+.tutorialTitle {
+    font-family: URW Chancery L, cursive;
+    font-size: 1.75em;
+    color: #6f418b;
+    font-weight: 700
+}
+
+h2, h3, h4 {
+  font-family: 'Lato', sans-serif;
+  color: #6f418b;
+  font-weight: 700
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+	font-size: 18px;
+	font-weight: 400
+}
+
+.topicsList .topic {
+    font-size: 18px;
+}
+
+p.caption {
+   font-size: 0.4em;
+   font-color: dimgray
+}
+
+/*body {
+  background-image: url('bg5.png');
+  background-attachment: fixed;
+  background-size: 100%;
+}*/
+
+p {
+  font-size: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 180%;
+}
+
+p.caption {
+  font-size: 10px;
+  font-color: dimgray
+}
+
+
+hr {
+  border: 7px solid gainsboro;
+  border-radius: 0px;
+}
+
+code {
+  background-color: #6f418b;
+  color: black;
+  font-family: Roboto Mono;
+}
+
+pre {
+  font-size: 15px;
+}
+
+.pagedtable-wrapper {
+  border-radius: 0px;
+  border-color: white;
+  background-color: #ececec;
+}
+
+a {
+  color: #6f418b;
+}
+
+a:hover {
+  color: #6f418b;
+}
+
+.topics {
+    width: 75%;
+    overflow-x: auto;
+    padding-bottom: 600px;
+    border-color: white;
+    padding-left: 20px;
+}
+
+.topicsList .topic {
+  font-weight: bold;
+  border-color: gainsboro;
+  background-color: white;
+  border-left: none;
+  padding-left: 10px;
+}
+
+.topicsList .topic.current {
+  border-color: white;
+  background-color: #d9cbe1;
+  color: white;
+}
+
+.topicsList .topic:hover {
+  background-color: #6f418b;
+  color: white;
+}
+
+.pageContent {
+  padding-top: 30px;
+}
+
+.btn {
+  border-radius: 0px;
+}
+
+.btn-primary {
+    background-color: #6f418b;
+    font-size: 16px;
+}
+
+.btn, .btn-success, .btn-xs, .btn-tutorial-run, .pull-right {
+  background-color: #6f418b;
+  color: white;
+}
+
+.btn-default {
+    background-color: #6f418b;
+    color: white;
+    font-size: 16px;
+}
+
+.btn-tutorial-solution {
+  border: none;
+}
+
+
+.btn-tutorial-solution:hover {
+  background-color: #6f418b;
+  color:white;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary:focus:active, .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success:focus:active, .btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info:focus:active, .btn-default:hover {
+    background-color: #6f418b;
+    color: white;
+}

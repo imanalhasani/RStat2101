@@ -1,8 +1,15 @@
 ---
 title: "RStat2101"
+author:
+  - name: "Iman Al Hasani"
+    url: https://github.com/imanalhasani/RStat2101
+    affiliation: Sultan Qaboos University
+    affiliation_url: https://www.squ.edu.om
 output: 
    learnr::tutorial:
-       theme: "sandstone" 
+    progressive: true
+    allow_skip: true
+    css: css/custom.css
 runtime: shiny_prerendered
 ---
 
@@ -15,25 +22,16 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ## Introduction
-This is the computer laboratory materials of the course STAT2101: Introduction to Statistics. In this course you learn the exploratory data analysis with RStudio: an integrated development environment for R, a programming language for statistical computing and graphics.
 
-<!--<span style="color: royalblue;">RStudio</span>-->
+This is RStat2101, the computer laboratory materials of the course STAT2101: Introduction to Statistics. The course is offered by the department of Statistics at Sultan Qaboos university. In RStat2101, you will learn the basics of statistical data analysis with RStudio: an integrated development environment for R, a programming language for statistical computing and graphics. 
 
-This could be the first time you hear about R or RStudio, but do not worry! Here, we will walk you through each of the steps required to begin using R. 
+This could be the first time you hear about R or RStudio, but do not worry! Here, we will walk you through each of the steps required to begin using R.
 
-<figure>
-     <img src="images/r_learners_encouragement.jpeg" alt="RLearners"  style="width:100%">
-    <figcaption>Illustration by Allison Horst.</figcaption>
-</figure>
+![Illustration Credit: Allison Horst.](images/r_learners_encouragement.jpeg){style="width: 800px; heiht: 300px; "}
 
 
 
 Let us know what is R?
-
-
-
-
-
 
 
 ### Exercise
@@ -58,7 +56,7 @@ add <- function() {
 }
 ```
 
-## Topic 2
+## Summary Statistics
 
 ### Exercise with Hint
 
@@ -96,3 +94,12 @@ quiz(
   )
 )
 ```
+## Data Visualization
+
+## Basic Probability
+
+## Confidence Intervals & Hypothesis Tests 
+
+## Correlation and Regression
+
+
