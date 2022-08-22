@@ -112,21 +112,35 @@ if (window.hljs) {
 
 <div id="section-introduction" class="section level2">
 <h2>Introduction</h2>
-<p>This is RStat2101, the computer laboratory materials of the course
-STAT2101: Introduction to Statistics. The course is offered by the
-department of Statistics at Sultan Qaboos university. In RStat2101, you
-will learn the basics of statistical data analysis with RStudio: an
-integrated development environment for R, a programming language for
-statistical computing and graphics.</p>
-<p>This could be the first time you hear about R or RStudio, but do not
-worry! Here, we will walk you through each of the steps required to
-begin using R.</p>
+<p>This is RStat2101, the R <img src="images/r.png"
+style="width:0.15in" /> laboratory materials for the course STAT2101:
+Introduction to Statistics. R is an open-source statistical programming
+language for data analysis and data science. RStat2101 introduces the
+fundamentals of statistical analysis required to drive value from data.
+Here, you will learn how to explore data numerically and graphically
+using descriptive and basic inferential statistics. You will also learn
+how to find probabilities of the common distributions: Normal and
+Binomial.</p>
+<p>If this is the first time you hear about R, the following short video
+created by R Consortium provides an overview about the program, its
+applications and what is used for.</p>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XcBLEVknqvY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</center>
+<p>In Rtat2101, you are going to use a user-friendly R interface called
+RStudio <img src="images/rstudio.png" style="width:0.35in" />. It is an
+integrated development environment (IDE) for working with R. It is easy
+to write scripts and has practical features for data analysis and
+visualization.</p>
+<!--The course is offered by the department of Statistics at <a href="https://www.squ.edu.om">Sultan Qaboos university</a>-->
+<p>This could be the first time you , but do not worry! Here, we will
+walk you through each of the steps required to begin using R.</p>
 <div class="figure">
 <img src="images/r_learners_encouragement1.png"
 style="width: 800px; heiht: 300px;  " alt="" />
 <p class="caption">Illustration Credit: Allison Horst.</p>
 </div>
-<p>Let us know what is R?</p>
 <div id="section-exercise" class="section level3">
 <h3>Exercise</h3>
 <p><em>Here’s a simple exercise with an empty code chunk provided for
@@ -362,16 +376,16 @@ learnr:::store_exercise_cache(structure(list(label = "print-limit", global_setup
  
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "quiz-1", question = structure("Which package contains functions for installing other R packages?", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_d23218e", 
+"character")), answers = list(structure(list(id = "lnr_ans_d4a8d3b", 
     option = "base", value = "base", label = structure("base", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_1b50102", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_96739d3", 
     option = "tools", value = "tools", label = structure("tools", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_1f36b33", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_93c43c4", 
     option = "utils", value = "utils", label = structure("utils", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_e25a673", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_26173cd", 
     option = "codetools", value = "codetools", label = structure("codetools", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
 "tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
@@ -381,7 +395,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "quiz-1-answer", question = "quiz-1"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = FALSE, seed = 1594913764.25731, 
+    random_answer_order = FALSE, allow_retry = FALSE, seed = 1956366446.089, 
     options = list()), class = c("learnr_radio", "tutorial_question"
 )), session = session)
 </script>
@@ -389,16 +403,16 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "quiz-2", question = structure("Which of the R packages listed below are used to create plots?", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_42331b3", 
+"character")), answers = list(structure(list(id = "lnr_ans_8e1058e", 
     option = "lattice", value = "lattice", label = structure("lattice", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_9da48c9", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_1a36de", 
     option = "tools", value = "tools", label = structure("tools", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_a7cc57d", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_bcc7ba0", 
     option = "stats", value = "stats", label = structure("stats", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_e882bec", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_fc42b63", 
     option = "grid", value = "grid", label = structure("grid", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
 "tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
@@ -408,7 +422,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
 "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "quiz-2-answer", question = "quiz-2"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = FALSE, seed = 918402461.072335, 
+    random_answer_order = FALSE, allow_retry = FALSE, seed = 2087695780.02784, 
     options = list()), class = c("learnr_checkbox", "tutorial_question"
 )), session = session)
 </script>
@@ -435,9 +449,16 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
 <!-- begin doc-metadata -->
 <div id="doc-metadata">
 <h1 class="title toc-ignore" style="display:none;">RStat2101</h1>
-<h4 class="author"><em>Iman Al Hasani</em></h4>
+<h4 class="author"><em><a href="https://github.com/imanalhasani/RStat2101">Iman
+Al Hasani, PhD</a></em></h4>
 <address class="author_afil">
-Sultan Qaboos University<br></div>
+<div
+class="line-block"><a href="https://www.squ.edu.om/science/Departments/Statistics">Department
+of Statistics</a><br />
+<a href="https://www.squ.edu.om/science/">College of Science</a><br />
+<a href="https://www.squ.edu.om">Sultan Qaboos University</a><br />
+email: <a href="mailto:alhasnie@squ.edu.om"
+class="email">alhasnie@squ.edu.om</a></div><br></div>
 <!-- end doc-metadata -->
 
 </div> <!-- bandContent.topicsListContainer -->

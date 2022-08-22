@@ -1,16 +1,19 @@
 ---
 title: "RStat2101"
 author:
-  - name: "Iman Al Hasani"
-    url: https://github.com/imanalhasani/RStat2101
-    affiliation: Sultan Qaboos University
-    affiliation_url: https://www.squ.edu.om
+  - name: <a href="https://github.com/imanalhasani/RStat2101">Iman Al Hasani, PhD</a>\newline
+    affiliation: | 
+      | <a href="https://www.squ.edu.om/science/Departments/Statistics">Department of Statistics</a>
+      | <a href="https://www.squ.edu.om/science/">College of Science</a>
+      | <a href="https://www.squ.edu.om">Sultan Qaboos University</a>
+      | email: alhasnie@squ.edu.om
 output: 
    learnr::tutorial:
     progressive: true
     allow_skip: true
     css: css/custom.css
 runtime: shiny_prerendered
+description: "Welcome to learnr tutorials!"
 ---
 
 ```{r setup, include=FALSE}
@@ -23,15 +26,22 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Introduction
 
-This is RStat2101, the computer laboratory materials of the course STAT2101: Introduction to Statistics. The course is offered by the department of Statistics at Sultan Qaboos university. In RStat2101, you will learn the basics of statistical data analysis with RStudio: an integrated development environment for R, a programming language for statistical computing and graphics. 
+This is RStat2101, the R ![](images/r.png){width="0.15in"} laboratory materials for the course STAT2101: Introduction to Statistics. R is an open-source statistical programming language for data analysis and data science. RStat2101 introduces the fundamentals of statistical analysis required to drive value from data. Here, you will learn how to explore data numerically and graphically using descriptive and basic inferential statistics. You will also learn how to find probabilities of the common distributions: Normal and Binomial.
 
-This could be the first time you hear about R or RStudio, but do not worry! Here, we will walk you through each of the steps required to begin using R.
+If this is the first time you hear about R, the following short video created by R Consortium provides an overview about the program, its applications and what is used for.
+
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XcBLEVknqvY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</center>
+
+In Rtat2101, you are going to use a user-friendly R interface called RStudio ![](images/rstudio.png){width="0.35in"}. It is an integrated development environment (IDE) for working with R. It is easy to write scripts and has practical features for data analysis and visualization. 
+
+<!--The course is offered by the department of Statistics at <a href="https://www.squ.edu.om">Sultan Qaboos university</a>-->
+
+This could be the first time you , but do not worry! Here, we will walk you through each of the steps required to begin using R.
 
 ![Illustration Credit: Allison Horst.](images/r_learners_encouragement1.png){style="width: 800px; heiht: 300px;  "}
-
-
-
-Let us know what is R?
 
 
 ### Exercise
