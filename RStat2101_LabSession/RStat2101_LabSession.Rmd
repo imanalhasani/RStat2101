@@ -31,20 +31,30 @@ This is RStat2101, the R ![](images/r.png){width="0.15in"} laboratory materials 
 If this is the first time you hear about R, the following short video created by R Consortium provides an overview about the program, its applications and what is used for.
 
 <center>
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XcBLEVknqvY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
 </iframe>
+
 </center>
 
-In Rtat2101, you are going to use a user-friendly R interface called RStudio ![](images/rstudio.png){width="0.35in"}. It is an integrated development environment (IDE) for working with R. It is easy to write scripts and has practical features for data analysis and visualization. 
+In RStat2101, you are going to work with a user-friendly R interface called RStudio ![](images/rstudio.png){width="0.55in"}. It is an integrated development environment (IDE) for working with R. It is easy for writing scripts and has practical features for data analysis and visualizations. RStudio Desktop version is available in the Statistics computer laboratories, where RStat2101 sessions are run. However, if you are interested to install it on your personal computer, you need to install R first and then Rstudio.
+
+- To download and install R, click [here](https://cran.r-project.org/)
+- To download and install RStudio, click [here]( https://www.rstudio.com/products/rstudio/download/)
+
+For help installing R and RStudio, follow the installation instructions for [Windows](file:///Users/imanal-hasani/Desktop/Stat2101_FALL22/RStat2101/RStat2101_LabSession/R_installation_guide/R-Installation-For-Windows.html) users and [Mac]() users (courtesy of Afra Al Manei, Department of Statistics, SQU). You can also sign up in [RStudio Cloud](https://rstudio.cloud/) and use the online version of the program. 
+Also, RStudio is available in Anaconda Navigator. However, R packages are not included in the default base environment and hence an R environment has to be created to run Rstudio. For help, see this [Anaconda Documentation](
+https://docs.anaconda.com/anaconda/navigator/tutorials/create-r-environment/).
 
 <!--The course is offered by the department of Statistics at <a href="https://www.squ.edu.om">Sultan Qaboos university</a>-->
+To use RStudio, you type code in it and ask the device to interpret them and act on their instructions. For some of you, this could be the first time you are coding, but do not worry! The course does not require to have any background in computer programming! Here, we will walk you through each of the steps required to begin using Rstudio.
 
-This could be the first time you , but do not worry! Here, we will walk you through each of the steps required to begin using R.
+![Illustration Credit: Allison Horst.](images/r_learners_encouragement1.png){style="width: 800px; height: 500px;  "}
 
-![Illustration Credit: Allison Horst.](images/r_learners_encouragement1.png){style="width: 800px; heiht: 300px;  "}
+More information about RStudio is available on the RStudio website, including a nice video overview.
 
-
-### Exercise
+Let us start your first R code!
 
 *Here's a simple exercise with an empty code chunk provided for entering the answer.*
 
@@ -104,12 +114,11 @@ quiz(
   )
 )
 ```
+
 ## Data Visualization
 
 ## Basic Probability
 
-/*## Confidence Intervals & Hypothesis Tests*/
+/*\## Confidence Intervals & Hypothesis Tests*/
 
-/*## Correlation and Regression*/
-
-
+/*\## Correlation and Regression*/

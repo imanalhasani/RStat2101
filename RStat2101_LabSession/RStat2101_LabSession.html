@@ -128,21 +128,46 @@ applications and what is used for.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XcBLEVknqvY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 </center>
-<p>In Rtat2101, you are going to use a user-friendly R interface called
-RStudio <img src="images/rstudio.png" style="width:0.35in" />. It is an
-integrated development environment (IDE) for working with R. It is easy
-to write scripts and has practical features for data analysis and
-visualization.</p>
+<p>In RStat2101, you are going to work with a user-friendly R interface
+called RStudio <img src="images/rstudio.png" style="width:0.55in" />. It
+is an integrated development environment (IDE) for working with R. It is
+easy for writing scripts and has practical features for data analysis
+and visualizations. RStudio Desktop version is available in the
+Statistics computer laboratories, where RStat2101 sessions are run.
+However, if you are interested to install it on your personal computer,
+you need to install R first and then Rstudio.</p>
+<ul>
+<li>To download and install R, click <a
+href="https://cran.r-project.org/">here</a></li>
+<li>To download and install RStudio, click <a
+href="https://www.rstudio.com/products/rstudio/download/">here</a></li>
+</ul>
+<p>For help installing R and RStudio, follow the installation
+instructions for <a
+href="file:///Users/imanal-hasani/Desktop/Stat2101_FALL22/RStat2101/RStat2101_LabSession/R_installation_guide/R-Installation-For-Windows.html">Windows</a>
+users and <a href="">Mac</a> users (courtesy of Afra Al Manei,
+Department of Statistics, SQU). You can also sign up in <a
+href="https://rstudio.cloud/">RStudio Cloud</a> and use the online
+version of the program. Also, RStudio is available in Anaconda
+Navigator. However, R packages are not included in the default base
+environment and hence an R environment has to be created to run Rstudio.
+For help, see this <a
+href="https://docs.anaconda.com/anaconda/navigator/tutorials/create-r-environment/">Anaconda
+Documentation</a>.</p>
 <!--The course is offered by the department of Statistics at <a href="https://www.squ.edu.om">Sultan Qaboos university</a>-->
-<p>This could be the first time you , but do not worry! Here, we will
-walk you through each of the steps required to begin using R.</p>
+<p>To use RStudio, you type code in it and ask the device to interpret
+them and act on their instructions. For some of you, this could be the
+first time you are coding, but do not worry! The course does not require
+to have any background in computer programming! Here, we will walk you
+through each of the steps required to begin using Rstudio.</p>
 <div class="figure">
 <img src="images/r_learners_encouragement1.png"
-style="width: 800px; heiht: 300px;  " alt="" />
+style="width: 800px; height: 500px;  " alt="" />
 <p class="caption">Illustration Credit: Allison Horst.</p>
 </div>
-<div id="section-exercise" class="section level3">
-<h3>Exercise</h3>
+<p>More information about RStudio is available on the RStudio website,
+including a nice video overview.</p>
+<p>Let us start your first R code!</p>
 <p><em>Here’s a simple exercise with an empty code chunk provided for
 entering the answer.</em></p>
 <p>Write the R code required to add two plus two:</p>
@@ -150,7 +175,6 @@ entering the answer.</em></p>
 data-completion="1" data-diagnostics="1" data-startover="1"
 data-lines="0">
 <script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":false,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
-</div>
 </div>
 <div id="section-exercise-with-code" class="section level3">
 <h3>Exercise with Code</h3>
@@ -229,8 +253,7 @@ base and recommended R packages:</p>
 <div id="section-basic-probability" class="section level2">
 <h2>Basic Probability</h2>
 <p>/<em>## Confidence Intervals &amp; Hypothesis Tests</em>/</p>
-<p>/<em>## Correlation and Regression</em>/</p>
-<p>
+<p>/<em>## Correlation and Regression</em>/ 
 <script type="application/shiny-prerendered" data-context="server-start">
 # packages
 library(learnr)
@@ -238,35 +261,35 @@ library(tidyverse)
 # hide non-exercise code chunks
 knitr::opts_chunk$set(echo = FALSE)
 </script>
- 
+
+
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::register_http_handlers(session, metadata = NULL)
 </script>
-
-
+ 
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::prepare_tutorial_state(session)
 </script>
- 
+
+
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::i18n_observe_tutorial_language(input, session)
 </script>
-
-
+ 
 <script type="application/shiny-prerendered" data-context="server">
 session$onSessionEnded(function() {
         learnr:::event_trigger(session, "session_stop")
       })
 </script>
- 
+
+
 <script type="application/shiny-prerendered" data-context="server">
 `tutorial-exercise-two-plus-two-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-two-plus-two-code-editor`)), session)
 output$`tutorial-exercise-two-plus-two-output` <- renderUI({
   `tutorial-exercise-two-plus-two-result`()
 })
 </script>
-
-
+ 
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::store_exercise_cache(structure(list(label = "two-plus-two", global_setup = structure(c("# packages", 
 "library(learnr)", "library(tidyverse)", "# hide non-exercise code chunks", 
@@ -295,15 +318,15 @@ learnr:::store_exercise_cache(structure(list(label = "two-plus-two", global_setu
         fig.num = 0L, exercise.df_print = "paged", exercise.checker = "NULL"), 
     engine = "r", version = "3"), class = "tutorial_exercise"))
 </script>
- 
+
+
 <script type="application/shiny-prerendered" data-context="server">
 `tutorial-exercise-add-function-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-add-function-code-editor`)), session)
 output$`tutorial-exercise-add-function-output` <- renderUI({
   `tutorial-exercise-add-function-result`()
 })
 </script>
-
-
+ 
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::store_exercise_cache(structure(list(label = "add-function", global_setup = structure(c("# packages", 
 "library(learnr)", "library(tidyverse)", "# hide non-exercise code chunks", 
@@ -334,15 +357,15 @@ learnr:::store_exercise_cache(structure(list(label = "add-function", global_setu
         fig.num = 0, exercise.df_print = "paged", exercise.checker = "NULL"), 
     engine = "r", version = "3"), class = "tutorial_exercise"))
 </script>
- 
+
+
 <script type="application/shiny-prerendered" data-context="server">
 `tutorial-exercise-print-limit-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-print-limit-code-editor`)), session)
 output$`tutorial-exercise-print-limit-output` <- renderUI({
   `tutorial-exercise-print-limit-result`()
 })
 </script>
-
-
+ 
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::store_exercise_cache(structure(list(label = "print-limit", global_setup = structure(c("# packages", 
 "library(learnr)", "library(tidyverse)", "# hide non-exercise code chunks", 
@@ -373,19 +396,20 @@ learnr:::store_exercise_cache(structure(list(label = "print-limit", global_setup
         fig.alt = NULL, fig.num = 0, exercise.df_print = "paged", 
         exercise.checker = "NULL"), engine = "r", version = "3"), class = "tutorial_exercise"))
 </script>
- 
+
+
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "quiz-1", question = structure("Which package contains functions for installing other R packages?", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_d4a8d3b", 
+"character")), answers = list(structure(list(id = "lnr_ans_bde459f", 
     option = "base", value = "base", label = structure("base", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_96739d3", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_b17f1f6", 
     option = "tools", value = "tools", label = structure("tools", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_93c43c4", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_a5520df", 
     option = "utils", value = "utils", label = structure("utils", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_26173cd", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_7b04f96", 
     option = "codetools", value = "codetools", label = structure("codetools", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
 "tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
@@ -395,24 +419,23 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "quiz-1-answer", question = "quiz-1"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = FALSE, seed = 1956366446.089, 
+    random_answer_order = FALSE, allow_retry = FALSE, seed = 1901440977.11457, 
     options = list()), class = c("learnr_radio", "tutorial_question"
 )), session = session)
 </script>
-
-
+ 
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "quiz-2", question = structure("Which of the R packages listed below are used to create plots?", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_8e1058e", 
+"character")), answers = list(structure(list(id = "lnr_ans_d85b710", 
     option = "lattice", value = "lattice", label = structure("lattice", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_1a36de", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_98ce606", 
     option = "tools", value = "tools", label = structure("tools", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_bcc7ba0", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_bbd8217", 
     option = "stats", value = "stats", label = structure("stats", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_fc42b63", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_5ebd387", 
     option = "grid", value = "grid", label = structure("grid", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
 "tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
@@ -422,7 +445,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
 "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "quiz-2-answer", question = "quiz-2"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = FALSE, seed = 2087695780.02784, 
+    random_answer_order = FALSE, allow_retry = FALSE, seed = 1001087432.03383, 
     options = list()), class = c("learnr_checkbox", "tutorial_question"
 )), session = session)
 </script>
