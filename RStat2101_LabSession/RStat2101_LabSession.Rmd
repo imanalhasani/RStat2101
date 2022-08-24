@@ -40,41 +40,25 @@ If this is the first time you hear about R, the following short video created by
 
 In RStat2101, you are going to work with a user-friendly R interface called RStudio ![](images/rstudio.png){width="0.55in"}. It is an integrated development environment (IDE) for working with R. It is easy for writing scripts and has practical features for data analysis and visualizations. RStudio Desktop version is available in the Statistics computer laboratories, where RStat2101 sessions are run. However, if you are interested to install it on your personal computer, you need to install R first and then Rstudio.
 
-- To download and install R, click [here](https://cran.r-project.org/)
-- To download and install RStudio, click [here]( https://www.rstudio.com/products/rstudio/download/)
+-   To download and install R, click [here](https://cran.r-project.org/)
+-   To download and install RStudio, click [here](https://www.rstudio.com/products/rstudio/download/)
 
-For help installing R and RStudio, follow the installation instructions for [Windows](file:///Users/imanal-hasani/Desktop/Stat2101_FALL22/RStat2101/RStat2101_LabSession/R_installation_guide/R-Installation-For-Windows.html) users and [Mac]() users (courtesy of Afra Al Manei, Department of Statistics, SQU). You can also sign up in [RStudio Cloud](https://rstudio.cloud/) and use the online version of the program. 
-Also, RStudio is available in Anaconda Navigator. However, R packages are not included in the default base environment and hence an R environment has to be created to run Rstudio. For help, see this [Anaconda Documentation](
-https://docs.anaconda.com/anaconda/navigator/tutorials/create-r-environment/).
+For help installing R and RStudio, follow the installation instructions for [Windows](file:///Users/imanal-hasani/Desktop/Stat2101_FALL22/RStat2101/RStat2101_LabSession/R_installation_guide/R-Installation-For-Windows.html) users and [Mac]() users (courtesy of Afra Al Manei, Department of Statistics, SQU). You can also sign up in [RStudio Cloud](https://rstudio.cloud/) and use the online version of the program. Also, RStudio is available in Anaconda Navigator. However, R packages are not included in the default base environment and hence an R environment has to be created to run Rstudio. For help, see this [Anaconda Documentation](https://docs.anaconda.com/anaconda/navigator/tutorials/create-r-environment/).
 
-<!--The course is offered by the department of Statistics at <a href="https://www.squ.edu.om">Sultan Qaboos university</a>-->
+<!--The course is offered by the department of Statistics at <a href="https://www.squ.edu.om">Sultan Qaboos university More information about RStudio is available on the RStudio website, including a nice video overview.</a>-->
+
 To use RStudio, you type code in it and ask the device to interpret them and act on their instructions. For some of you, this could be the first time you are coding, but do not worry! The course does not require to have any background in computer programming! Here, we will walk you through each of the steps required to begin using Rstudio.
 
 ![Illustration Credit: Allison Horst.](images/r_learners_encouragement1.png){style="width: 800px; height: 500px;  "}
 
-More information about RStudio is available on the RStudio website, including a nice video overview.
+Let us start your first R code! The following box is an empty code chunk provided to write and run code. For example, write `print("Welcome to R!")` and then click **Run Code**. The output of the code will print below the chunk. You should see the text
 
-Let us start your first R code!
-
-*Here's a simple exercise with an empty code chunk provided for entering the answer.*
-
-Write the R code required to add two plus two:
-
-```{r two-plus-two, exercise=TRUE}
-
+[1] "Welcome to R!"
+```{r welcome, exercise=TRUE}
 ```
+Congrats, you've run your first line of code!
 
-### Exercise with Code
-
-*Here's an exercise with some prepopulated code as well as `exercise.lines = 5` to provide a bit more initial room to work.*
-
-Now write a function that adds any two numbers and then call it:
-
-```{r add-function, exercise=TRUE, exercise.lines = 5}
-add <- function() {
-  
-}
-```
+## R Basics
 
 ## Summary Statistics
 
