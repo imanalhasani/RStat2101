@@ -3,6 +3,7 @@ title: "R and RStudio Installation For Windows"
 subtitle: STAT2101 
 author: 
 - Afra Al Manei, Msc in Statistics
+- Reviewed by Dr. Iman Al Hasani (Coordinator of STAT2101)
 output:
   html_document: default
 editor_options: 

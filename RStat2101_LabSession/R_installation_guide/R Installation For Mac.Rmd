@@ -1,10 +1,9 @@
 ---
 title: "R and RStudio Installation For Mac"
 subtitle: STAT2101
-Coordinator: 
-- Dr. Iman Al Hasani
 author: 
 - Afra Al Manei, Msc in Statistics
+- Reviewed by Dr. Iman Al Hasani (Coordinator of STAT2101)
 output:
   html_document: default
 ---
@@ -25,7 +24,7 @@ Here, we will explain how to download and install the two programs in details.
 
 ## \color{blue} Download and install R program?
 
-1. First go to the CRAN page \textcolor{blue}{https://cran.r-project.org/}.
+1. First go to the [CRAN page](https://cran.r-project.org/).
 2. Press on the link that has the same as your computer operating system (OS). See the picture bellow.
 
 ```{r echo=FALSE, out.width = "100%", message=FALSE, warning=FALSE, paged.print=FALSE}
