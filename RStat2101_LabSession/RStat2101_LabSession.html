@@ -110,8 +110,8 @@ if (window.hljs) {
 
 <article class="topics" id="learnr-tutorial-content">
 
-<div id="section-introduction" class="section level2">
-<h2>Introduction</h2>
+<div id="section-welcome" class="section level2">
+<h2>Welcome!</h2>
 <p>This is RStat2101, the R laboratory materials for the course
 STAT2101: Introduction to Statistics. The course is offered by the
 department of Statistics at <a href="https://www.squ.edu.om">Sultan
@@ -129,25 +129,28 @@ applications and what is used for.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XcBLEVknqvY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 </center>
+</div>
+<div id="section-install-rstudio" class="section level2">
+<h2>Install RStudio</h2>
 <p>In RStat2101, you are going to work with a user-friendly R interface
 called RStudio. It is an integrated development environment (IDE) for
 working with R. It is easy for writing scripts and has practical
 features for data analysis and visualizations. Check out Rstudio website
-to take a tour of Take a tour of <a
-href="https://www.rstudio.com/products/RStudio/"
-title="Opens in a new window">RStudio’s IDE</a>. RStudio Desktop version
-is available in the Statistics Department computer laboratories, where
-RStat2101 sessions are run. However, if you are interested to install it
-on your personal computer, you need to install R first and then
-Rstudio.</p>
+to take a tour of <a href="https://www.rstudio.com/products/RStudio/"
+title="Opens in a new window">RStudio’s IDE</a>.</p>
+<p>RStudio Desktop version is available in the Statistics Department
+computer laboratories, where RStat2101 sessions are run. However, if you
+are interested to install it on your personal computer, you need to
+install R first and then Rstudio.</p>
 <ul>
 <li>To download and install R, click <a
 href="https://cran.r-project.org/">here</a></li>
 <li>To download and install RStudio, click <a
 href="https://www.rstudio.com/products/rstudio/download/">here</a></li>
 </ul>
-<p>For help installing R and RStudio, follow the installation
-instructions for <a
+<p><img src="images/RstudioWelc.png"
+style="float: right; width: 200px; height: 200px;  " /> For help
+installing R and RStudio, follow the installation instructions for <a
 href="https://rpubs.com/ImanAlhasani/RInstallationforWindows">Windows</a>
 users and <a
 href="https://rpubs.com/ImanAlhasani/RInstallationforMac">Mac</a> users
@@ -160,30 +163,29 @@ Rstudio. For help, see this <a
 href="https://docs.anaconda.com/anaconda/navigator/tutorials/create-r-environment/">Anaconda
 Documentation</a>.</p>
 <!--The course is offered by the department of Statistics at <a href="https://www.squ.edu.om">Sultan Qaboos university More information about RStudio is available on the RStudio website, including a nice video overview.</a>-->
+</div>
+<div id="section-get-started" class="section level2">
+<h2>Get Started</h2>
 <p>To use RStudio, you type code in it and ask the device to interpret
 them and act on their instructions. For some of you, this could be the
 first time you are coding, but do not worry! The course does not require
 to have any background in computer programming! Here, we will walk you
 through each of the steps required to begin using Rstudio.</p>
 <div class="figure">
-<img src="images/r_learners_encouragement1.png"
-style="width: 800px; height: 500px;  " alt="" />
+<img src="images/r_learners_encouragement.jpeg"
+style="width: 900px; height: 400px;  " alt="" />
 <p class="caption">Illustration Credit: Allison Horst.</p>
 </div>
 <p>Let us start your first R code! The following box is an empty code
 chunk provided to write and run code. For example, write
 <code>print("Welcome to R!")</code> and then click
-<code>Run Code</code>. This will print [1] “Welcome to R!” below the
-chunk.</p>
+<code>Run Code</code>. The output will be shown below the chunk.</p>
 <div class="tutorial-exercise" data-label="welcome" data-completion="1"
 data-diagnostics="1" data-startover="1" data-lines="0">
 <script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":false,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
 </div>
-<p>Congrats, you’ve run your first line of code! In the next session,
-you will learn the R basics code.</p>
-</div>
-<div id="section-r-basics" class="section level2">
-<h2>R Basics</h2>
+<p>Congrats, you’ve run your first line of code! In the next lines, you
+will learn the R basics code.</p>
 </div>
 <div id="section-summary-statistics" class="section level2">
 <h2>Summary Statistics</h2>
@@ -354,16 +356,16 @@ learnr:::store_exercise_cache(structure(list(label = "print-limit", global_setup
 
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "quiz-1", question = structure("Which package contains functions for installing other R packages?", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_d1fa5fa", 
+"character")), answers = list(structure(list(id = "lnr_ans_4047a53", 
     option = "base", value = "base", label = structure("base", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_d3d8a23", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_38ccbec", 
     option = "tools", value = "tools", label = structure("tools", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_d3b6e95", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_37b0251", 
     option = "utils", value = "utils", label = structure("utils", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_6019672", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_18d27f1", 
     option = "codetools", value = "codetools", label = structure("codetools", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
 "tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
@@ -373,23 +375,23 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "quiz-1-answer", question = "quiz-1"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = FALSE, seed = 1486237000.30792, 
+    random_answer_order = FALSE, allow_retry = FALSE, seed = 2024325650.05735, 
     options = list()), class = c("learnr_radio", "tutorial_question"
 )), session = session)
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "quiz-2", question = structure("Which of the R packages listed below are used to create plots?", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_dddb3fd", 
+"character")), answers = list(structure(list(id = "lnr_ans_7bbdacc", 
     option = "lattice", value = "lattice", label = structure("lattice", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_91d2e4b", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_580dbfe", 
     option = "tools", value = "tools", label = structure("tools", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_8316203", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_5dee410", 
     option = "stats", value = "stats", label = structure("stats", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_8092a47", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_f77d24c", 
     option = "grid", value = "grid", label = structure("grid", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
 "tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
@@ -399,7 +401,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
 "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "quiz-2-answer", question = "quiz-2"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = FALSE, seed = 1452148283.32379, 
+    random_answer_order = FALSE, allow_retry = FALSE, seed = 1578208125.26509, 
     options = list()), class = c("learnr_checkbox", "tutorial_question"
 )), session = session)
 </script>
