@@ -2,11 +2,6 @@
 title: "RStat2101"
 author:
   - name: <a href="https://github.com/imanalhasani/RStat2101">Iman Al Hasani, PhD</a>\newline
-    affiliation: | 
-      | <a href="https://www.squ.edu.om/science/Departments/Statistics">Department of Statistics</a>
-      | <a href="https://www.squ.edu.om/science/">College of Science</a>
-      | <a href="https://www.squ.edu.om">Sultan Qaboos University</a>
-      | email: alhasnie@squ.edu.om
 output: 
    learnr::tutorial:
     progressive: true
@@ -23,17 +18,23 @@ library(tidyverse)
 # hide non-exercise code chunks
 knitr::opts_chunk$set(echo = FALSE)
 ```
-## Welcome!
+
+## Welcome
+
 This is RStat2101, the R laboratory materials for the course STAT2101: Introduction to Statistics. The course is offered by the department of Statistics at <a href="https://www.squ.edu.om">Sultan Qaboos university</a>. R is an open-source statistical programming language for data analysis and data science. RStat2101 introduces the fundamentals of statistical analysis required to drive value from data. Here, you will learn how to explore data numerically and graphically using descriptive and basic inferential statistics. You will also learn how to find probabilities of the common distributions: Normal and Binomial.
 
 If this is the first time you hear about R, the following short video created by R Consortium provides an overview about the program, its applications and what is used for.
 
 <center>
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XcBLEVknqvY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
 </iframe>
+
 </center>
 
 ## Install RStudio
+
 In RStat2101, you are going to work with a user-friendly R interface called RStudio. It is an integrated development environment (IDE) for working with R. It is easy for writing scripts and has practical features for data analysis and visualizations. Check out Rstudio website to take a tour of [RStudio's IDE](https://www.rstudio.com/products/RStudio/ "Opens in a new window").
 
 RStudio Desktop version is available in the Statistics Department computer laboratories, where RStat2101 sessions are run. However, if you are interested to install it on your personal computer, you need to install R first and then Rstudio.
@@ -41,66 +42,45 @@ RStudio Desktop version is available in the Statistics Department computer labor
 -   To download and install R, click [here](https://cran.r-project.org/)
 -   To download and install RStudio, click [here](https://www.rstudio.com/products/rstudio/download/)
 
-![](images/RstudioWelc.png){style="float: right; width: 200px; height: 200px;  "}
-For help installing R and RStudio, follow the installation instructions for [Windows](https://rpubs.com/ImanAlhasani/RInstallationforWindows) users and [Mac](https://rpubs.com/ImanAlhasani/RInstallationforMac) users (courtesy of Afra Al Manei, Department of Statistics, SQU). You can also sign up in [RStudio Cloud](https://rstudio.cloud/) and use the online version of the program. Also, RStudio is available in Anaconda Navigator. However, R packages are not included in the default base environment and hence an R environment has to be created to run Rstudio. For help, see this [Anaconda Documentation](https://docs.anaconda.com/anaconda/navigator/tutorials/create-r-environment/).
-
-<!--The course is offered by the department of Statistics at <a href="https://www.squ.edu.om">Sultan Qaboos university More information about RStudio is available on the RStudio website, including a nice video overview.</a>-->
+![](images/RstudioWelc.png){style="float: right; width: 200px; height: 200px;  "} For help installing R and RStudio, follow the installation instructions for [Windows](https://rpubs.com/ImanAlhasani/RInstallationforWindows) users and [Mac](https://rpubs.com/ImanAlhasani/RInstallationforMac) users (courtesy of Afra Al Manei, Department of Statistics, SQU). You can also sign up in [RStudio Cloud](https://rstudio.cloud/) and use the online version of the program. Also, RStudio is available in Anaconda Navigator. However, R packages are not included in the default base environment and hence an R environment has to be created to run Rstudio. For help, see this [Anaconda Documentation](https://docs.anaconda.com/anaconda/navigator/tutorials/create-r-environment/).
 
 ## Get Started
+
 To use RStudio, you type code in it and ask the device to interpret them and act on their instructions. For some of you, this could be the first time you are coding, but do not worry! The course does not require to have any background in computer programming! Here, we will walk you through each of the steps required to begin using Rstudio.
 
-![Illustration Credit: Allison Horst.](images/r_learners_encouragement.jpeg){style="width: 900px; height: 400px;  "}
-
-Let us start your first R code! The following box is an empty code chunk provided to write and run code. For example, write `print("Welcome to R!")` and then click `Run Code`. The output will be shown below the chunk.
+![](images/r_learners_encouragement.jpeg){style="width: 900px; height: 400px;  "} Let us start your first R code! The following box is an empty code chunk provided to write and run code. For example, write `print("Welcome to R!")` and then click `Run Code`. The output will be shown below the chunk.
 
 ```{r welcome, exercise=TRUE}
 ```
 
-Congrats, you've run your first line of code! In the next lines, you will learn the R basics code.
+Congrats, you've run your first line of code!
 
-## Summary Statistics
+#### Basic Operators:
 
-### Exercise with Hint
+The simplest and the most complicated calculations can be done using R easily. The basic mathematics operators are
 
-*Here's an exercise where the chunk is pre-evaulated via the `exercise.eval` option (so the user can see the default output we'd like them to customize). We also add a "hint" to the correct solution via the chunk immediate below labeled `print-limit-hint`.*
+| Addition | Subtraction | Multiplication | Division | Power |
+|:--------:|:-----------:|:--------------:|:--------:|:-----:|
+|   `+`    |     `-`     |      `*`       |   `/`    |  `^`  |
 
-Modify the following code to limit the number of rows printed to 5:
+##### Exercise:
+
+*Complete the following chunk by writing the correct operator to find:* $5+3$, $5-3$, $5\times 3$, $5/3$ and $5^3$.
 
 ```{r print-limit, exercise=TRUE, exercise.eval=TRUE}
-mtcars
+# addition
+5+3
 ```
 
 ```{r print-limit-hint}
-head(mtcars)
+# addition
+5+3
+# subtraction
+5-3
+# multiplication
+5*3
+# division
+5/3
+# power
+5^3
 ```
-
-### Quiz
-
-*You can include any number of single or multiple choice questions as a quiz. Use the `question` function to define a question and the `quiz` function for grouping multiple questions together.*
-
-Some questions to verify that you understand the purposes of various base and recommended R packages:
-
-```{r quiz}
-quiz(
-  question("Which package contains functions for installing other R packages?",
-    answer("base"),
-    answer("tools"),
-    answer("utils", correct = TRUE),
-    answer("codetools")
-  ),
-  question("Which of the R packages listed below are used to create plots?",
-    answer("lattice", correct = TRUE),
-    answer("tools"),
-    answer("stats"),
-    answer("grid", correct = TRUE)
-  )
-)
-```
-
-## Data Visualization
-
-## Basic Probability
-
-/*\## Confidence Intervals & Hypothesis Tests*/
-
-/*\## Correlation and Regression*/

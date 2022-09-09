@@ -1,8 +1,5 @@
-
 /* @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,100,300;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,500;1,100;1,300&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,400&family=Roboto:wght@100;500&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100&family=Merriweather:ital,wght@0,300;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,500;1,100;1,300&display=swap');
 */
 
@@ -23,11 +20,11 @@ h4.author {
   font-size: 10px;
   color: #6f418b;
 }
+
 body {
   font-family: 'Lato', sans-serif;
 	font-size: 18px;
 	font-weight: 400
-	background-color: transparent;
 }
 
 .topicsList .topic {
@@ -46,7 +43,6 @@ p.caption {
 }*/
 
 p {
-  font-size: 16px;
   padding-top: 10px;
   padding-bottom: 10px;
   line-height: 180%;
@@ -75,8 +71,8 @@ pre {
 
 .pagedtable-wrapper {
   border-radius: 0px;
-  border-color: #ececec;
-  background-color: transparent;
+  border-color: white;
+  background-color: #ececec;
 }
 
 a {
@@ -84,34 +80,34 @@ a {
 }
 
 a:hover {
-  color: #6f418b;
+  color: #a8305e;
 }
 
 .topics {
     width: 75%;
     overflow-x: auto;
     padding-bottom: 600px;
-    border-color: transparent;
+    border-color: white;
     padding-left: 20px;
 }
 
 .topicsList .topic {
   font-weight: bold;
   border-color: #6f418b;
-  background-color: transparent;
+  background-color: white;
   border-left: none;
   padding-left: 10px;
 }
 
 .topicsList .topic.current {
-  border-color: transparent;
-  background-color: #d9cbe1;
-  color: transparent;
+  border-color: white;
+  background-color: #c34a79;
+  color: white;
 }
 
 .topicsList .topic:hover {
   background-color: #6f418b;
-  color: #6f418b;
+  color: white;
 }
 
 .pageContent {
@@ -152,3 +148,4 @@ a:hover {
     background-color: #6f418b;
     color: white;
 }
+

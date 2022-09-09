@@ -111,7 +111,7 @@ if (window.hljs) {
 <article class="topics" id="learnr-tutorial-content">
 
 <div id="section-welcome" class="section level2">
-<h2>Welcome!</h2>
+<h2>Welcome</h2>
 <p>This is RStat2101, the R laboratory materials for the course
 STAT2101: Introduction to Statistics. The course is offered by the
 department of Statistics at <a href="https://www.squ.edu.om">Sultan
@@ -162,7 +162,6 @@ base environment and hence an R environment has to be created to run
 Rstudio. For help, see this <a
 href="https://docs.anaconda.com/anaconda/navigator/tutorials/create-r-environment/">Anaconda
 Documentation</a>.</p>
-<!--The course is offered by the department of Statistics at <a href="https://www.squ.edu.om">Sultan Qaboos university More information about RStudio is available on the RStudio website, including a nice video overview.</a>-->
 </div>
 <div id="section-get-started" class="section level2">
 <h2>Get Started</h2>
@@ -171,84 +170,71 @@ them and act on their instructions. For some of you, this could be the
 first time you are coding, but do not worry! The course does not require
 to have any background in computer programming! Here, we will walk you
 through each of the steps required to begin using Rstudio.</p>
-<div class="figure">
-<img src="images/r_learners_encouragement.jpeg"
-style="width: 900px; height: 400px;  " alt="" />
-<p class="caption">Illustration Credit: Allison Horst.</p>
-</div>
-<p>Let us start your first R code! The following box is an empty code
-chunk provided to write and run code. For example, write
-<code>print("Welcome to R!")</code> and then click
-<code>Run Code</code>. The output will be shown below the chunk.</p>
+<p><img src="images/r_learners_encouragement.jpeg"
+style="width: 900px; height: 400px;  " /> Let us start your first R
+code! The following box is an empty code chunk provided to write and run
+code. For example, write <code>print("Welcome to R!")</code> and then
+click <code>Run Code</code>. The output will be shown below the
+chunk.</p>
 <div class="tutorial-exercise" data-label="welcome" data-completion="1"
 data-diagnostics="1" data-startover="1" data-lines="0">
 <script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":false,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
 </div>
-<p>Congrats, you’ve run your first line of code! In the next lines, you
-will learn the R basics code.</p>
-</div>
-<div id="section-summary-statistics" class="section level2">
-<h2>Summary Statistics</h2>
-<div id="section-exercise-with-hint" class="section level3">
-<h3>Exercise with Hint</h3>
-<p><em>Here’s an exercise where the chunk is pre-evaulated via the
-<code>exercise.eval</code> option (so the user can see the default
-output we’d like them to customize). We also add a “hint” to the correct
-solution via the chunk immediate below labeled
-<code>print-limit-hint</code>.</em></p>
-<p>Modify the following code to limit the number of rows printed to
-5:</p>
+<p>Congrats, you’ve run your first line of code!</p>
+<div id="section-basic-operators" class="section level4">
+<h4>Basic Operators:</h4>
+<p>The simplest and the most complicated calculations can be done using
+R easily. The basic mathematics operators are</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Addition</th>
+<th align="center">Subtraction</th>
+<th align="center">Multiplication</th>
+<th align="center">Division</th>
+<th align="center">Power</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><code>+</code></td>
+<td align="center"><code>-</code></td>
+<td align="center"><code>*</code></td>
+<td align="center"><code>/</code></td>
+<td align="center"><code>^</code></td>
+</tr>
+</tbody>
+</table>
+<div id="section-exercise" class="section level5">
+<h5>Exercise:</h5>
+<p><em>Complete the following chunk by writing the correct operator to
+find:</em> <span class="math inline">\(5+3\)</span>, <span
+class="math inline">\(5-3\)</span>, <span class="math inline">\(5\times
+3\)</span>, <span class="math inline">\(5/3\)</span> and <span
+class="math inline">\(5^3\)</span>.</p>
 <div class="tutorial-exercise" data-label="print-limit"
 data-completion="1" data-diagnostics="1" data-startover="1"
 data-lines="0">
-<pre class="text"><code>mtcars</code></pre>
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["mpg"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["cyl"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["disp"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["hp"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["drat"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["wt"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["qsec"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["vs"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["am"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["gear"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["carb"],"name":[11],"type":["dbl"],"align":["right"]}],"data":[{"1":"21.0","2":"6","3":"160.0","4":"110","5":"3.90","6":"2.620","7":"16.46","8":"0","9":"1","10":"4","11":"4","_rn_":"Mazda RX4"},{"1":"21.0","2":"6","3":"160.0","4":"110","5":"3.90","6":"2.875","7":"17.02","8":"0","9":"1","10":"4","11":"4","_rn_":"Mazda RX4 Wag"},{"1":"22.8","2":"4","3":"108.0","4":"93","5":"3.85","6":"2.320","7":"18.61","8":"1","9":"1","10":"4","11":"1","_rn_":"Datsun 710"},{"1":"21.4","2":"6","3":"258.0","4":"110","5":"3.08","6":"3.215","7":"19.44","8":"1","9":"0","10":"3","11":"1","_rn_":"Hornet 4 Drive"},{"1":"18.7","2":"8","3":"360.0","4":"175","5":"3.15","6":"3.440","7":"17.02","8":"0","9":"0","10":"3","11":"2","_rn_":"Hornet Sportabout"},{"1":"18.1","2":"6","3":"225.0","4":"105","5":"2.76","6":"3.460","7":"20.22","8":"1","9":"0","10":"3","11":"1","_rn_":"Valiant"},{"1":"14.3","2":"8","3":"360.0","4":"245","5":"3.21","6":"3.570","7":"15.84","8":"0","9":"0","10":"3","11":"4","_rn_":"Duster 360"},{"1":"24.4","2":"4","3":"146.7","4":"62","5":"3.69","6":"3.190","7":"20.00","8":"1","9":"0","10":"4","11":"2","_rn_":"Merc 240D"},{"1":"22.8","2":"4","3":"140.8","4":"95","5":"3.92","6":"3.150","7":"22.90","8":"1","9":"0","10":"4","11":"2","_rn_":"Merc 230"},{"1":"19.2","2":"6","3":"167.6","4":"123","5":"3.92","6":"3.440","7":"18.30","8":"1","9":"0","10":"4","11":"4","_rn_":"Merc 280"},{"1":"17.8","2":"6","3":"167.6","4":"123","5":"3.92","6":"3.440","7":"18.90","8":"1","9":"0","10":"4","11":"4","_rn_":"Merc 280C"},{"1":"16.4","2":"8","3":"275.8","4":"180","5":"3.07","6":"4.070","7":"17.40","8":"0","9":"0","10":"3","11":"3","_rn_":"Merc 450SE"},{"1":"17.3","2":"8","3":"275.8","4":"180","5":"3.07","6":"3.730","7":"17.60","8":"0","9":"0","10":"3","11":"3","_rn_":"Merc 450SL"},{"1":"15.2","2":"8","3":"275.8","4":"180","5":"3.07","6":"3.780","7":"18.00","8":"0","9":"0","10":"3","11":"3","_rn_":"Merc 450SLC"},{"1":"10.4","2":"8","3":"472.0","4":"205","5":"2.93","6":"5.250","7":"17.98","8":"0","9":"0","10":"3","11":"4","_rn_":"Cadillac Fleetwood"},{"1":"10.4","2":"8","3":"460.0","4":"215","5":"3.00","6":"5.424","7":"17.82","8":"0","9":"0","10":"3","11":"4","_rn_":"Lincoln Continental"},{"1":"14.7","2":"8","3":"440.0","4":"230","5":"3.23","6":"5.345","7":"17.42","8":"0","9":"0","10":"3","11":"4","_rn_":"Chrysler Imperial"},{"1":"32.4","2":"4","3":"78.7","4":"66","5":"4.08","6":"2.200","7":"19.47","8":"1","9":"1","10":"4","11":"1","_rn_":"Fiat 128"},{"1":"30.4","2":"4","3":"75.7","4":"52","5":"4.93","6":"1.615","7":"18.52","8":"1","9":"1","10":"4","11":"2","_rn_":"Honda Civic"},{"1":"33.9","2":"4","3":"71.1","4":"65","5":"4.22","6":"1.835","7":"19.90","8":"1","9":"1","10":"4","11":"1","_rn_":"Toyota Corolla"},{"1":"21.5","2":"4","3":"120.1","4":"97","5":"3.70","6":"2.465","7":"20.01","8":"1","9":"0","10":"3","11":"1","_rn_":"Toyota Corona"},{"1":"15.5","2":"8","3":"318.0","4":"150","5":"2.76","6":"3.520","7":"16.87","8":"0","9":"0","10":"3","11":"2","_rn_":"Dodge Challenger"},{"1":"15.2","2":"8","3":"304.0","4":"150","5":"3.15","6":"3.435","7":"17.30","8":"0","9":"0","10":"3","11":"2","_rn_":"AMC Javelin"},{"1":"13.3","2":"8","3":"350.0","4":"245","5":"3.73","6":"3.840","7":"15.41","8":"0","9":"0","10":"3","11":"4","_rn_":"Camaro Z28"},{"1":"19.2","2":"8","3":"400.0","4":"175","5":"3.08","6":"3.845","7":"17.05","8":"0","9":"0","10":"3","11":"2","_rn_":"Pontiac Firebird"},{"1":"27.3","2":"4","3":"79.0","4":"66","5":"4.08","6":"1.935","7":"18.90","8":"1","9":"1","10":"4","11":"1","_rn_":"Fiat X1-9"},{"1":"26.0","2":"4","3":"120.3","4":"91","5":"4.43","6":"2.140","7":"16.70","8":"0","9":"1","10":"5","11":"2","_rn_":"Porsche 914-2"},{"1":"30.4","2":"4","3":"95.1","4":"113","5":"3.77","6":"1.513","7":"16.90","8":"1","9":"1","10":"5","11":"2","_rn_":"Lotus Europa"},{"1":"15.8","2":"8","3":"351.0","4":"264","5":"4.22","6":"3.170","7":"14.50","8":"0","9":"1","10":"5","11":"4","_rn_":"Ford Pantera L"},{"1":"19.7","2":"6","3":"145.0","4":"175","5":"3.62","6":"2.770","7":"15.50","8":"0","9":"1","10":"5","11":"6","_rn_":"Ferrari Dino"},{"1":"15.0","2":"8","3":"301.0","4":"335","5":"3.54","6":"3.570","7":"14.60","8":"0","9":"1","10":"5","11":"8","_rn_":"Maserati Bora"},{"1":"21.4","2":"4","3":"121.0","4":"109","5":"4.11","6":"2.780","7":"18.60","8":"1","9":"1","10":"4","11":"2","_rn_":"Volvo 142E"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
-</div>
+<pre class="text"><code># addition
+5+3</code></pre>
+<pre><code>[1] 8</code></pre>
 <script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":false,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
 </div>
 <div class="tutorial-exercise-support" data-label="print-limit-hint"
 data-completion="1" data-diagnostics="1" data-startover="1"
 data-lines="0">
-<pre class="text"><code>head(mtcars)</code></pre>
+<pre class="text"><code># addition
+5+3
+# subtraction
+5-3
+# multiplication
+5*3
+# division
+5/3
+# power
+5^3</code></pre>
 </div>
-</div>
-<div id="section-quiz" class="section level3">
-<h3>Quiz</h3>
-<p><em>You can include any number of single or multiple choice questions
-as a quiz. Use the <code>question</code> function to define a question
-and the <code>quiz</code> function for grouping multiple questions
-together.</em></p>
-<p>Some questions to verify that you understand the purposes of various
-base and recommended R packages:</p>
-<div class="panel-heading tutorial-quiz-title"><span data-i18n="text.quiz">Quiz</span></div>
-<div class="panel panel-default tutorial-question-container">
-<div data-label="quiz-1" class="tutorial-question panel-body">
-<div id="quiz-1-answer_container" class="shiny-html-output"></div>
-<div id="quiz-1-message_container" class="shiny-html-output"></div>
-<div id="quiz-1-action_button_container" class="shiny-html-output"></div>
-<script>if (Tutorial.triggerMathJax) Tutorial.triggerMathJax()</script>
-</div>
-</div>
-<div class="panel panel-default tutorial-question-container">
-<div data-label="quiz-2" class="tutorial-question panel-body">
-<div id="quiz-2-answer_container" class="shiny-html-output"></div>
-<div id="quiz-2-message_container" class="shiny-html-output"></div>
-<div id="quiz-2-action_button_container" class="shiny-html-output"></div>
-<script>if (Tutorial.triggerMathJax) Tutorial.triggerMathJax()</script>
-</div>
-</div>
-</div>
-</div>
-<div id="section-data-visualization" class="section level2">
-<h2>Data Visualization</h2>
-</div>
-<div id="section-basic-probability" class="section level2">
-<h2>Basic Probability</h2>
-<p>/<em>## Confidence Intervals &amp; Hypothesis Tests</em>/</p>
-<p>/<em>## Correlation and Regression</em>/ 
+<p>
 <script type="application/shiny-prerendered" data-context="server-start">
 # packages
 library(learnr)
@@ -256,35 +242,35 @@ library(tidyverse)
 # hide non-exercise code chunks
 knitr::opts_chunk$set(echo = FALSE)
 </script>
-
-
+ 
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::register_http_handlers(session, metadata = NULL)
 </script>
- 
+
+
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::prepare_tutorial_state(session)
 </script>
-
-
+ 
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::i18n_observe_tutorial_language(input, session)
 </script>
- 
+
+
 <script type="application/shiny-prerendered" data-context="server">
 session$onSessionEnded(function() {
         learnr:::event_trigger(session, "session_stop")
       })
 </script>
-
-
+ 
 <script type="application/shiny-prerendered" data-context="server">
 `tutorial-exercise-welcome-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-welcome-code-editor`)), session)
 output$`tutorial-exercise-welcome-output` <- renderUI({
   `tutorial-exercise-welcome-result`()
 })
 </script>
- 
+
+
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::store_exercise_cache(structure(list(label = "welcome", global_setup = structure(c("# packages", 
 "library(learnr)", "library(tidyverse)", "# hide non-exercise code chunks", 
@@ -313,24 +299,24 @@ learnr:::store_exercise_cache(structure(list(label = "welcome", global_setup = s
         fig.num = 0L, exercise.df_print = "paged", exercise.checker = "NULL"), 
     engine = "r", version = "3"), class = "tutorial_exercise"))
 </script>
-
-
+ 
 <script type="application/shiny-prerendered" data-context="server">
 `tutorial-exercise-print-limit-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-print-limit-code-editor`)), session)
 output$`tutorial-exercise-print-limit-output` <- renderUI({
   `tutorial-exercise-print-limit-result`()
 })
 </script>
- 
+
+
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::store_exercise_cache(structure(list(label = "print-limit", global_setup = structure(c("# packages", 
 "library(learnr)", "library(tidyverse)", "# hide non-exercise code chunks", 
 "knitr::opts_chunk$set(echo = FALSE)"), chunk_opts = list(label = "setup", 
     include = FALSE)), setup = NULL, chunks = list(list(label = "print-limit", 
-    code = "mtcars", opts = list(label = "\"print-limit\"", exercise = "TRUE", 
-        exercise.eval = "TRUE"), engine = "r")), code_check = NULL, 
-    error_check = NULL, check = NULL, solution = NULL, tests = NULL, 
-    options = list(eval = TRUE, echo = TRUE, results = "markup", 
+    code = "# addition\n5+3", opts = list(label = "\"print-limit\"", 
+        exercise = "TRUE", exercise.eval = "TRUE"), engine = "r")), 
+    code_check = NULL, error_check = NULL, check = NULL, solution = NULL, 
+    tests = NULL, options = list(eval = TRUE, echo = TRUE, results = "markup", 
         tidy = FALSE, tidy.opts = NULL, collapse = FALSE, prompt = FALSE, 
         comment = NA, highlight = FALSE, size = "normalsize", 
         background = "#F7F7F7", strip.white = TRUE, cache = 0, 
@@ -347,63 +333,10 @@ learnr:::store_exercise_cache(structure(list(label = "print-limit", global_setup
         message = TRUE, render = NULL, ref.label = NULL, child = NULL, 
         engine = "r", split = FALSE, include = TRUE, purl = TRUE, 
         max.print = 1000, label = "print-limit", exercise = TRUE, 
-        exercise.eval = TRUE, code = "mtcars", out.width.px = 624, 
-        out.height.px = 384, params.src = "print-limit, exercise=TRUE, exercise.eval=TRUE", 
+        exercise.eval = TRUE, code = c("# addition", "5+3"), 
+        out.width.px = 624, out.height.px = 384, params.src = "print-limit, exercise=TRUE, exercise.eval=TRUE", 
         fig.alt = NULL, fig.num = 0, exercise.df_print = "paged", 
         exercise.checker = "NULL"), engine = "r", version = "3"), class = "tutorial_exercise"))
-</script>
-
-
-<script type="application/shiny-prerendered" data-context="server">
-learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "quiz-1", question = structure("Which package contains functions for installing other R packages?", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_4047a53", 
-    option = "base", value = "base", label = structure("base", html = TRUE, class = c("html", 
-    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_38ccbec", 
-    option = "tools", value = "tools", label = structure("tools", html = TRUE, class = c("html", 
-    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_37b0251", 
-    option = "utils", value = "utils", label = structure("utils", html = TRUE, class = c("html", 
-    "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_18d27f1", 
-    option = "codetools", value = "codetools", label = structure("codetools", html = TRUE, class = c("html", 
-    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
-"character")), try_again = structure("<span data-i18n=\"button.questiontryagain\">Try Again<\u002fspan>", html = TRUE, class = c("html", 
-"character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", 
-"character")), try_again = structure("Incorrect", html = TRUE, class = c("html", 
-"character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
-"character")), message = NULL, post_message = NULL), ids = list(
-    answer = "quiz-1-answer", question = "quiz-1"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = FALSE, seed = 2024325650.05735, 
-    options = list()), class = c("learnr_radio", "tutorial_question"
-)), session = session)
-</script>
- 
-<script type="application/shiny-prerendered" data-context="server">
-learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "quiz-2", question = structure("Which of the R packages listed below are used to create plots?", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_7bbdacc", 
-    option = "lattice", value = "lattice", label = structure("lattice", html = TRUE, class = c("html", 
-    "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_580dbfe", 
-    option = "tools", value = "tools", label = structure("tools", html = TRUE, class = c("html", 
-    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_5dee410", 
-    option = "stats", value = "stats", label = structure("stats", html = TRUE, class = c("html", 
-    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_f77d24c", 
-    option = "grid", value = "grid", label = structure("grid", html = TRUE, class = c("html", 
-    "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
-"character")), try_again = structure("<span data-i18n=\"button.questiontryagain\">Try Again<\u002fspan>", html = TRUE, class = c("html", 
-"character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", 
-"character")), try_again = structure("Incorrect", html = TRUE, class = c("html", 
-"character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
-"character")), message = NULL, post_message = NULL), ids = list(
-    answer = "quiz-2-answer", question = "quiz-2"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = FALSE, seed = 1578208125.26509, 
-    options = list()), class = c("learnr_checkbox", "tutorial_question"
-)), session = session)
 </script>
 </p>
 <!--html_preserve-->
@@ -416,6 +349,8 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
 {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages","version"]},"class":{"type":"character","attributes":{},"value":["data.frame"]},"row.names":{"type":"integer","attributes":{},"value":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87]}},"value":[{"type":"character","attributes":{},"value":["assertthat","backports","base","broom","bslib","cachem","cellranger","checkmate","cli","colorspace","compiler","crayon","curl","datasets","DBI","dbplyr","digest","dplyr","ellipsis","evaluate","fansi","fastmap","forcats","fs","gargle","generics","ggplot2","glue","googledrive","googlesheets4","graphics","grDevices","grid","gtable","haven","hms","htmltools","htmlwidgets","httpuv","httr","jquerylib","jsonlite","knitr","later","learnr","lifecycle","lubridate","magrittr","markdown","methods","mime","modelr","munsell","pillar","pkgconfig","promises","purrr","R6","Rcpp","readr","readxl","reprex","rlang","rmarkdown","rprojroot","rstudioapi","rvest","sass","scales","shiny","stats","stringi","stringr","tibble","tidyr","tidyselect","tidyverse","tools","tzdb","utf8","utils","vctrs","withr","xfun","xml2","xtable","yaml"]},{"type":"character","attributes":{},"value":["0.2.1","1.4.1","4.2.1","1.0.0","0.4.0","1.0.6","1.1.0","2.1.0","3.3.0","2.0-3","4.2.1","1.5.1","4.3.2","4.2.1","1.1.3","2.2.1","0.6.29","1.0.9","0.3.2","0.15","1.0.3","1.1.0","0.5.1","1.5.2","1.2.0","0.1.3","3.3.6","1.6.2","2.0.0","1.0.0","4.2.1","4.2.1","4.2.1","0.3.0","2.5.0","1.1.1","0.5.3","1.5.4","1.6.5","1.4.3","0.1.4","1.8.0","1.39","1.3.0","0.10.5.9000","1.0.1","1.8.0","2.0.3","1.1","4.2.1","0.12","0.1.8","0.5.0","1.8.0","2.0.3","1.2.0.1","0.3.4","2.5.1","1.0.9","2.1.2","1.4.0","2.0.1","1.0.4","2.14","2.0.3","0.13","1.0.2","0.4.2","1.2.0","1.7.2","4.2.1","1.7.8","1.4.0","3.1.8","1.2.0","1.1.2","1.3.2","4.2.1","0.3.0","1.2.2","4.2.1","0.4.1","2.5.0","0.31","1.3.3","1.8-4","2.3.5"]}]}]}
 </script>
 <!--/html_preserve-->
+</div>
+</div>
 </div>
 
 </article> <!-- topics -->
@@ -430,14 +365,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
 <h1 class="title toc-ignore" style="display:none;">RStat2101</h1>
 <h4 class="author"><em><a href="https://github.com/imanalhasani/RStat2101">Iman
 Al Hasani, PhD</a></em></h4>
-<address class="author_afil">
-<div
-class="line-block"><a href="https://www.squ.edu.om/science/Departments/Statistics">Department
-of Statistics</a><br />
-<a href="https://www.squ.edu.om/science/">College of Science</a><br />
-<a href="https://www.squ.edu.om">Sultan Qaboos University</a><br />
-email: <a href="mailto:alhasnie@squ.edu.om"
-class="email">alhasnie@squ.edu.om</a></div><br></div>
+</div>
 <!-- end doc-metadata -->
 
 </div> <!-- bandContent.topicsListContainer -->
