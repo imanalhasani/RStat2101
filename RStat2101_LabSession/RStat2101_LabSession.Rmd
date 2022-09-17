@@ -47,16 +47,11 @@ RStudio Desktop version is available in the Statistics Department computer labor
 ## Get Started
 
 To use RStudio, you type code in it and ask the device to interpret them and act on their instructions. For some of you, this could be the first time you are coding, but do not worry! The course does not require to have any background in computer programming! Here, we will walk you through each of the steps required to begin using Rstudio.
-
 ![](images/r_learners_encouragement.jpeg){style="width: 900px; height: 400px;  "} Let us start your first R code! The following box is an empty code chunk provided to write and run code. For example, write `print("Welcome to R!")` and then click `Run Code`. The output will be shown below the chunk.
-
 ```{r welcome, exercise=TRUE}
 ```
 
-Congrats, you've run your first line of code!
-
 #### Basic Operators:
-
 The simplest and the most complicated calculations can be done using R easily. The basic mathematics operators are
 
 | Addition | Subtraction | Multiplication | Division | Power |
@@ -64,15 +59,14 @@ The simplest and the most complicated calculations can be done using R easily. T
 |   `+`    |     `-`     |      `*`       |   `/`    |  `^`  |
 
 ##### Exercise:
-
 *Complete the following chunk by writing the correct operator to find:* $5+3$, $5-3$, $5\times 3$, $5/3$ and $5^3$.
 
-```{r print-limit, exercise=TRUE, exercise.eval=TRUE}
+```{r print-maths, exercise=TRUE, exercise.eval=TRUE}
 # addition
 5+3
 ```
 
-```{r print-limit-hint}
+```{r print-maths-hint}
 # addition
 5+3
 # subtraction
@@ -83,4 +77,50 @@ The simplest and the most complicated calculations can be done using R easily. T
 5/3
 # power
 5^3
+```
+
+##### Exercise:
+*Calculate $\frac{5\times 10^2}{3+4-2}$.*
+```{r mathscalculation, exercise=TRUE, exercise.eval=TRUE}
+#Maths calculation
+```
+
+```{r mathscalculation-hint }
+(5*(10^2))/(3+4-2)
+```
+
+#### Assigning Values
+In order to record a value in memory, we assign the value to a variable using `<-`; `variable <- value`. 
+
+##### Exercise:
+*Find* $X+Y$ and $X/Y$ *such that* $X=1$ *and* $Y=2$. *Then print the values of* $X$ *and* $Y$. 
+```{r assignvalue, exercise=TRUE, exercise.eval=TRUE}
+#assign 1 to X and 2 to Y
+
+```
+
+```{r assignvalue-hint}
+#assign 1 to a variable X and 2 to a variable Y
+X <- 1
+Y <- 2
+# X+Y
+X+Y
+# X/Y
+X/Y
+#print X and Y
+X
+Y
+# or 
+print(paste("X=", X, "and Y=", Y))
+#or simply
+paste("X=", X, "and Y=", Y) #paste: returns the concatenate string
+```
+The value is not necessarily a number! It can be a word, letter, vector of numbers, data frame, function,.., etc. 
+
+##### Exercise:
+*Modify the following code so that it prints your name and cohort*
+```{r namecohort,exercise=TRUE}
+myname <- "Afra"
+cohort <- 2018
+paste("Name: ",myname, ", Cohort: ", cohort)
 ```

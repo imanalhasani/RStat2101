@@ -10,7 +10,7 @@
     font-weight: 700
 }
 
-h2, h3, h4 {
+h2, h3, h4, h5, h6 {
   font-family: 'Lato', sans-serif;
   color: #6f418b;
   font-weight: 700
@@ -101,7 +101,7 @@ a:hover {
 
 .topicsList .topic.current {
   border-color: white;
-  background-color: #c34a79;
+  background-color: #d9cbe1;
   color: white;
 }
 
