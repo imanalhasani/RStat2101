@@ -14,14 +14,14 @@ description: "Welcome to learnr tutorials!"
 ```{r setup, include=FALSE}
 # packages
 library(learnr)
-library(tidyverse)
+#library(tidyverse)
 # hide non-exercise code chunks
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ## Welcome
 
-This is RStat2101, the R laboratory materials for the course STAT2101: Introduction to Statistics. The course is offered by the department of Statistics at <a href="https://www.squ.edu.om" target="_blank">Sultan Qaboos university</a>. R is an open-source statistical programming language for data analysis and data science. RStat2101 introduces the fundamentals of statistical analysis required to drive value from data. Here, you will learn how to explore data numerically and graphically using descriptive and basic inferential statistics. You will also learn how to find probabilities of the common distributions: Normal and Binomial.
+This is RStat2101, the R laboratory materials for the course STAT2101: Introduction to Statistics. The course is offered by the <a href="https://www.squ.edu.om/science/Departments/Statistics" target="_blank">department of Statistics</a> at <a href="https://www.squ.edu.om" target="_blank">Sultan Qaboos university</a>. R is an open-source statistical programming language for data analysis and data science. RStat2101 introduces the fundamentals of statistical analysis required to drive value from data. Here, you will learn how to explore data numerically and graphically using descriptive and basic inferential statistics. You will also learn how to find probabilities of the common distributions: Normal and Binomial.
 
 If this is the first time you hear about R, the following short video created by R Consortium provides an overview about the program, its applications and what is used for.
 
@@ -46,12 +46,15 @@ RStudio Desktop version is available in the Statistics Department computer labor
 
 ## Get Started
 
-To use RStudio, you type code in it and ask the device to interpret them and act on their instructions. For some of you, this could be the first time you are coding, but do not worry! The course does not require to have any background in computer programming! Here, we will walk you through each of the steps required to begin using Rstudio.
-![](images/r_learners_encouragement.jpeg){style="width: 900px; height: 400px;  "} Let us start your first R code! The following box is an empty code chunk provided to write and run code. For example, write `print("Welcome to R!")` and then click `Run Code`. The output will be shown below the chunk.
+To use RStudio, you type code in it and ask the device to interpret them and act on their instructions. For some of you, this could be the first time you are coding, but do not worry! The course does not require to have any background in computer programming! Here, we will walk you through each of the steps required to begin using Rstudio. ![](images/r_learners_encouragement.jpeg){style="width: 900px; height: 400px;  "} Let us start your first R code! The following box is an empty code chunk provided to write and run code. For example, write `print("Welcome to R!")` and then click `Run Code`. The output will be shown below the chunk.
+
 ```{r welcome, exercise=TRUE}
 ```
 
+Congrats, you've run your first line of code!![](images/happyR.png){style="float: right;    " width="160" height="87"}
+
 #### Basic Operators:
+
 The simplest and the most complicated calculations can be done using R easily. The basic mathematics operators are
 
 | Addition | Subtraction | Multiplication | Division | Power |
@@ -59,6 +62,7 @@ The simplest and the most complicated calculations can be done using R easily. T
 |   `+`    |     `-`     |      `*`       |   `/`    |  `^`  |
 
 ##### Exercise:
+
 *Complete the following chunk by writing the correct operator to find:* $5+3$, $5-3$, $5\times 3$, $5/3$ and $5^3$.
 
 ```{r print-maths, exercise=TRUE, exercise.eval=TRUE}
@@ -80,7 +84,9 @@ The simplest and the most complicated calculations can be done using R easily. T
 ```
 
 ##### Exercise:
-*Calculate $\frac{5\times 10^2}{3+4-2}$.*
+
+*Calculate* $\frac{5\times 10^2}{3+4-2}$.
+
 ```{r mathscalculation, exercise=TRUE, exercise.eval=TRUE}
 #Maths calculation
 ```
@@ -90,10 +96,13 @@ The simplest and the most complicated calculations can be done using R easily. T
 ```
 
 #### Assigning Values
-In order to record a value in memory, we assign the value to a variable using `<-`; `variable <- value`. 
+
+In order to record a value in memory, we assign the value to a variable using `<-`; `variable <- value`.
 
 ##### Exercise:
-*Find* $X+Y$ and $X/Y$ *such that* $X=1$ *and* $Y=2$. *Then print the values of* $X$ *and* $Y$. 
+
+*Find* $X+Y$ and $X/Y$ *such that* $X=1$ *and* $Y=2$. *Then print the values of* $X$ *and* $Y$.
+
 ```{r assignvalue, exercise=TRUE, exercise.eval=TRUE}
 #assign 1 to X and 2 to Y
 
@@ -115,12 +124,232 @@ print(paste("X=", X, "and Y=", Y))
 #or simply
 paste("X=", X, "and Y=", Y) #paste: returns the concatenate string
 ```
-The value is not necessarily a number! It can be a word, letter, vector of numbers, data frame, function,.., etc. 
+
+The value is not necessarily a number! It can be a word, letter, vector of numbers, data frame, function,.., etc.
 
 ##### Exercise:
+
 *Modify the following code so that it prints your name and cohort*
+
 ```{r namecohort,exercise=TRUE}
 myname <- "Afra"
 cohort <- 2018
 paste("Name: ",myname, ", Cohort: ", cohort)
 ```
+
+## Data Basics
+
+#### Vectors
+
+A collection of values can be combined in an object called vector. To create a vector, use the *concatenate* or *combine* function `c()`. For example, to assign values 2018, 2017, 2016 and 2016 to a variable cohort, type `cohort <- c(2018, 2017, 2016, 2016)`.
+
+```{r vector, exercise=TRUE, exercise.eval=TRUE}
+
+```
+
+```{r vector-hint }
+#create a vector 
+cohort <- c(2018,2017,2016,2016)
+cohort
+```
+
+##### Exercise:
+
+*Create three vectors:* `cohort <- c(2018, 2017, 2016, 2016)`*,* `gender <- c("female", "male", "female", "male")` *and* `graduated <- c(FALSE, FALSE, TRUE, TRUE)`.
+
+```{r vectors, exercise=TRUE, exercise.eval=TRUE}
+
+```
+
+```{r vectors-hint }
+# create vectors
+cohort <- c(2018,2017,2016,2016)
+gender <- c("female", "male","female", "male")
+graduated <- c(FALSE, FALSE, TRUE, TRUE)
+cohort
+gender
+graduated
+```
+
+#### Basic Data type
+
+To check the type of data, use `mode()` or `class()`.
+
+##### Exercise:
+
+*Check the mode of the vectors:* `cohort`*,* `gender` *and* `graduated`.
+
+```{r vectors-mode, exercise=TRUE, exercise.eval=TRUE}
+cohort <- c(2018,2017,2016,2016)
+gender <- c("female", "male","female", "male")
+graduated <- c(FALSE, FALSE, TRUE, TRUE)
+
+```
+
+```{r vectors-mode-hint}
+# check the data type using mode()
+mode(cohort)
+mode(gender)
+mode(graduated)
+
+# check the data type using class()
+# you can write more than one commands in one line with ; separator
+class(cohort); class(gender); class(graduated)
+```
+
+To check the length of a vector use `length()` function. To check both mode and length of a vector, use `str()` (structure) function. For example,to check the length of the vector gender, type `length(gender)` and to get mode and length information, type `str(gender)`
+
+```{r vectors-length, exercise=TRUE, exercise.eval=TRUE}
+gender <- c("female", "male","female", "male")
+```
+
+```{r vectors-length-hint}
+gender <- c("female", "male","female", "male")
+# check the length of gender
+length(gender)
+# check the mode and length of gender
+str(gender)
+```
+
+To retrieve values from a vector, type the name of the vector followed by square brackets. In the square brackets, place the index of the value. For example, check the output of the following: `gender[2]` , `gender[2:3]`, `gender[c(1,3)]` and `gender[c(1:2,4)]`
+
+```{r vectors-index,  exercise=TRUE,  exercise.eval=FALSE}
+gender <- c("female", "male","female", "male")
+gender[2]; gender[2:3]; gender[c(1,3)]; gender[c(1:2,4)]
+```
+
+#### Create a Data Frame
+
+A data frame is a collection of vectors aligned in a tabular form in rows and columns. Each column represents a variable (vector) and each row represents an observation (values). To create a data frame use `data.frame()`. For example, Let's create a small data frame called `std_info` that takes the variables `cohort`, `gender` and `graduated`.
+
+```{r dataframe, exercise=TRUE, exercise.eval=TRUE}
+std_info <- data.frame (cohort = c(2018,2017,2016,2016),
+                        gender = c("female", "male","female", "male"),
+                        graduated = c(FALSE, FALSE, TRUE, TRUE))
+std_info
+```
+
+```{r dataframe-hint}
+# explore the following code!
+cohort <- c(2018,2017,2016,2016)
+gender <- c("female", "male","female", "male")
+graduated <- c(FALSE, FALSE, TRUE, TRUE)
+std_info <- data.frame (cohort, gender, graduated )
+std_info
+```
+
+To get the structure of the data frame use `str()`. To get specific information about the data table such as number of columns, number of rows, number of rows and number of columns and the names of variables use `ncol()`, `nrow()`, `dim()` and `names()`, respectively.
+
+##### Exercise:
+
+*Explore the structure of the data frame* `std_info` *using* `str(std_info)`. *Then check the dimension of the data frame using* `dim(std_info)` *and list its variable names using* `names(std_info)`.
+
+```{r dataframe-info, exercise=TRUE, exercise.eval=TRUE}
+std_info <- data.frame (cohort = c(2018,2017,2016,2016),
+                        gender = c("female", "male","female", "male"),
+                        graduated = c(FALSE, FALSE, TRUE, TRUE))
+
+```
+
+```{r dataframe-info-hint}
+# structure of std_info
+str(std_info)
+#dimension of std_info
+dim(std_info)
+#name of variables in std_info
+names(std_info)
+```
+
+To refer to a value in the data frame, type the name of the data followed by square brackets. In the square brackets, place its row index and its column index separated by a comma. For example, to retrieve a data value in row 1 and column 2 from std_info, use `std_info[1,2]`. Explore the output of `std_info[,2]`, `std_info[1,]`, `std_info[1:2,1]` and `std_info[c(1,3),]`
+
+```{r dataframe-subsetbracket,exercise=TRUE, exercise.eval=TRUE}
+std_info <- data.frame (cohort = c(2018,2017,2016,2016),
+                        gender = c("female", "male","female", "male"),
+                        graduated = c(FALSE, FALSE, TRUE, TRUE))
+
+std_info[1,2]
+```
+
+```{r dataframe-subsetbracket-hint}
+std_info[,2]  # returns the values in the second variable
+std_info[1,]  # returns the values in the first row
+std_info[1:2,1] # returns the values in the first two rows of the first variable
+std_info[c(1,3),]# returns the values in the first and third rows
+```
+
+In addition, you can refer to a variable in the data table by typing the name of the data followed by `$` and the name of the variable. For example, extract the variable named cohort by typing `std_info$cohort`. Try to extract other variables.
+
+```{r dataframe-subsetvar,exercise=TRUE,  exercise.eval=FALSE}
+std_info <- data.frame (cohort = c(2018,2017,2016,2016),
+                        gender = c("female", "male","female", "male"),
+                        graduated = c(FALSE, FALSE, TRUE, TRUE))
+# extract cohort variable
+std_info$cohort
+
+# try to extract the other variables 
+
+
+```
+
+You can also get a subset of a data frame based on logical evaluation or comparison using logical operators. Here are some of the most common logical operators:
+
+| less than | less than or equal | greater than | greater than or equal | exactly equal | not equal | and | or  |
+|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
+|    \<     |        \<=         |      \>      |          \>=          |      ==       |    !=     |  &  | \|  |
+
+##### Exercise:
+
+*Study the following commands and try to extract more subsets using different logical operators.*
+
+```{r dataframe-logicalsubset,exercise=TRUE, exercise.eval=FALSE}
+std_info <- data.frame (cohort = c(2018,2017,2016,2016),
+                        gender = c("female", "male","female", "male"),
+                        graduated = c(FALSE, FALSE, TRUE, TRUE))
+
+## examine each value in the variable graduate whether is "male" or not
+std_info$graduated == "male" 
+## examine each value in the variable cohort whether is 2016 or not
+std_info$cohort == 2016
+
+#extract a subset of male students only
+std_info[std_info$gender == "male",] 
+
+#extract a subset of cohort 2016
+std_info[std_info$cohort == 2016,] 
+
+#extract a subset of cohort > 2016 and males
+std_info[std_info$cohort > 2016 & std_info$gender=="male",] 
+
+```
+
+You can add a variable to the existing data frame by attaching it to the data using `$`. For example, to add a `gpa` variable to `std_info`: set values of the `gpa` variable in a vector and then attach it to the data table `std_info`.
+
+```{r dataframe-addvar,exercise=TRUE, exercise.eval=FALSE}
+std_info <- data.frame (cohort = c(2018,2017,2016,2016),
+                        gender = c("female", "male","female", "male"),
+                        graduated = c(FALSE, FALSE, TRUE, TRUE))
+std_info$gpa <- c(3.1, 2.7, 2.9, 2.5)
+std_info
+
+```
+
+Data can be saved for a further work or to be shared with others. To save a data frame, you can use `write.csv()` to save in as csv file or `save()` to save it as RData file. For example, `write.csv(df,"Students.csv", row.names = TRUE)` or `save(std_info, file = "std_info.RData")`. Make sure to save it in an accessible directory.
+
+To import the saved data file, you can use `read.csv()` for csv data file or `load()` for RData file. For example `load(file = "std_info.Rdata")` or `read.csv(file = "std_info.csv", header = TRUE, sep = ",")`, where `sep = ","` tells that the file is comma delimited.
+
+##### Practice Exercise:
+
+> 1.  Create a folder on your desktop with a name RStat2101.
+> 2.  Open RStudio IDE
+> 3.  Set the folder RStat2101 as a working directory
+> 4.  Create a new R Script and save it with a name practice1
+> 5.  Type the following in the practice1 R script:
+
+```{r practice1, echo=TRUE}
+std_info <- data.frame (cohort = c(2018,2017,2016,2016), 
+                        gender = c("female", "male","female", "male"), 
+                        graduated = c(FALSE, FALSE, TRUE, TRUE))
+```
+
+> 6.   Save `std_info` as a csv file using `write.csv()` function.
+> 7.   Read the saved csv file using `read.csv()` function.
