@@ -17,6 +17,8 @@ library(learnr)
 #library(tidyverse)
 # hide non-exercise code chunks
 knitr::opts_chunk$set(echo = FALSE)
+## import the dataset in the R environment
+opensooq_apartments <- read.csv("opensooq_apartment.csv")
 ```
 
 ## Welcome
@@ -173,7 +175,7 @@ graduated
 
 #### Basic Data type
 
-To check the type of data, use `mode()` or `class()`.
+To check the type of data, use `mode()`, `class()` or `typeof()`.
 
 ##### Exercise:
 
@@ -195,6 +197,10 @@ mode(graduated)
 # check the data type using class()
 # you can write more than one commands in one line with ; separator
 class(cohort); class(gender); class(graduated)
+
+# check the data type using typeof()
+typeof(cohort); typeof(gender); typeof(graduated)
+
 ```
 
 To check the length of a vector use `length()` function. To check both mode and length of a vector, use `str()` (structure) function. For example,to check the length of the vector gender, type `length(gender)` and to get mode and length information, type `str(gender)`
@@ -287,8 +293,6 @@ std_info <- data.frame (cohort = c(2018,2017,2016,2016),
 std_info$cohort
 
 # try to extract the other variables 
-
-
 ```
 
 You can also get a subset of a data frame based on logical evaluation or comparison using logical operators. Here are some of the most common logical operators:
@@ -307,7 +311,7 @@ std_info <- data.frame (cohort = c(2018,2017,2016,2016),
                         graduated = c(FALSE, FALSE, TRUE, TRUE))
 
 ## examine each value in the variable graduate whether is "male" or not
-std_info$graduated == "male" 
+std_info$gender == "male" 
 ## examine each value in the variable cohort whether is 2016 or not
 std_info$cohort == 2016
 
@@ -333,7 +337,7 @@ std_info
 
 ```
 
-Data can be saved for a further work or to be shared with others. To save a data frame, you can use `write.csv()` to save in as csv file or `save()` to save it as RData file. For example, `write.csv(df,"Students.csv", row.names = TRUE)` or `save(std_info, file = "std_info.RData")`. Make sure to save it in an accessible directory.
+Data can be saved for a further work or to be shared with others. To save a data frame, you can use `write.csv()` to save in as csv file or `save()` to save it as RData file. For example, `write.csv(std_info,"std_info.csv", row.names = TRUE)` or `save(std_info, file = "std_info.RData")`. Make sure to save it in an accessible directory.
 
 To import the saved data file, you can use `read.csv()` for csv data file or `load()` for RData file. For example `load(file = "std_info.Rdata")` or `read.csv(file = "std_info.csv", header = TRUE, sep = ",")`, where `sep = ","` tells that the file is comma delimited.
 
@@ -351,5 +355,311 @@ std_info <- data.frame (cohort = c(2018,2017,2016,2016),
                         graduated = c(FALSE, FALSE, TRUE, TRUE))
 ```
 
-> 6.   Save `std_info` as a csv file using `write.csv()` function.
-> 7.   Read the saved csv file using `read.csv()` function.
+> 6.  Save `std_info` as a csv file using `write.csv()` function.
+> 7.  Read the saved csv file using `read.csv()` function.
+
+## Data Exploration I
+
+Data exploration is the initial statistical analysis that helps data analysts to understand data variables and uncover potential patterns. The exploration analysis involves summarizing data numerically and graphically using basic descriptive statistics and visualization tools. There are various statistical analysis tools to explore insights from data. In this section, we introduce the basic steps and tools of data exploration using R base functions. The focus will be on how to: import /load a dataset, identify variables and data types, tabulate data, describe variables numerically and display data graphically.
+
+1.  **Import a Dataset:** Consider <a href="https://github.com/ggSamoora/Workshops/blob/main/R-Ladies%20Dammam/R-Ladies%20Dammam%20Data.csv" target="_blank">OpenSooq Apartments dataset</a> that was scrapped by <a href="https://github.com/ggSamoora/Workshops" target="_blank">Samer Hijjazi</a> in <a href="https://youtu.be/ByeNpxr3z0M" target="_blank">Arabic Web Scraping</a> session for <a href="https://twitter.com/OmanRusers?s=20&t=F8j1F6x6AlY0WrHSxGj-tw" target="_blank">Oman R Users</a>. The data set was originally in Arabic but translated, organized and cleaned by Samer to be useful to practice data analysis. The dataset is provided in the course Moodle page as well to practice during R laboratory session.
+
+-   Import the dataset using `read.csv()` function:
+
+```{r read-dataset1, echo=TRUE}
+## import the dataset in the R environment
+opensooq_apartments <- read.csv("opensooq_apartment.csv")
+```
+
+2.  **Identify Variables and Data Types:** Datasets vary in shapes and structures but the classical shape of the dataset consists of columns and rows, where each column represents a variable, each row represents observations and each cell represents a value. Thus, checking the structure of a dataset is important to identify the included variables and data types. In addition, viewing part of the dataset and displaying names of the variables will help you to get a better understanding of the data.
+
+-   Display the names of the variables using `names()` function:
+
+```{r names-dataset1, echo=TRUE}
+## display the names of the variables
+names(opensooq_apartments) 
+```
+
+-   Display the first six rows of the dataset using `head()` function:
+
+```{r head-dataset1, echo=TRUE}
+## display the first 6 rows of the data
+head(opensooq_apartments)
+```
+
+-   Display the structure of the dataset using `str()` function:
+
+```{r str-dataset1, echo=TRUE}
+## display the data structure
+str(opensooq_apartments)
+```
+
+The dataset consists of $2437$ observations and $9$ variables: two numerical variables and four non-numerical variables.
+
+3.  **Tabulate Data:** Tabulation is a fundamental tool in data analysis, especially when exploring non-numerical data.
+
+-   Tabulate one of the non-numerical variable (e.g. city), using `table()` function:
+
+```{r tab-city, echo=TRUE}
+## tabulate city variable 
+table(opensooq_apartments$city)
+```
+
+-   Transform the table to get it in a classical format, using `transform()` function:
+
+```{r tansf-tab-city, echo=TRUE}
+## tabulate city variable such that city and frequency are in columns
+transform(table(City=opensooq_apartments$city)) ## try without writing city =
+```
+
+-   Assign the frequency table to an object for further use.
+
+```{r assign-tab-city, echo=TRUE}
+## assign the table to an object for further use
+city_table <- transform(table(City=opensooq_apartments$city)) 
+```
+
+-   Add the relative frequency to the frequency distribution using `prop.table()` function:
+
+```{r relative-tab-city, echo=TRUE}
+## add cummulative frequency to city_table
+city_table$Percentage <- prop.table(city_table$Freq)*100 
+## print the table
+city_table
+```
+
+-   Add the cumulative frequency or relative cumulative frequency to the frequency distribution using `cumsum()` function:
+
+```{r cumsum-tab-city, echo=TRUE}
+## add cummulative frequency to city_table
+city_table$Cum_Freq <- cumsum(city_table$Freq)
+## print the table
+city_table
+```
+
+```{r rel-cumsum-tab-city, echo=TRUE}
+## add relative cummulative frequency to city_table
+city_table$Cum_Percentage <- cumsum(city_table$Percentage)
+## print the table
+city_table
+```
+
+##### Exercise:
+
+Tabulate the variable `furnished` by showing the category, frequency, relative frequency, cumulative frequency and relative cumulative frequency.
+
+```{r tabulation, exercise=TRUE, exercise.eval=TRUE}
+
+```
+
+```{r tabulation-hint }
+# frequency distribution with catgeory and frequency
+furnished_table <- transform(table(Furnished=opensooq_apartments$furnished))
+## add relative frequency to furnished_table
+furnished_table$Percentage <- prop.table(furnished_table$Freq)*100
+## add cummulative frequency to furnished_table
+furnished_table$Cum_Freq <- cumsum(furnished_table$Freq)
+## add relative cummulative frequency to furnished_table
+furnished_table$Cum_Percentage<- cumsum(furnished_table$Percentage)
+## print the table
+furnished_table
+```
+
+**Display Data Graphically:** Graphs are crucial aspects of data analysis as they show how data points are distributed and provide a way to see and understand patterns and outliers in data. In addition, graphs helps people with no statistics background to extract some information about data.
+
+**4.1. Histogram:** The histogram is used to group numerical data into classes. To construct histogram use `hist()` function. For example: In OpenSooq Apprtments dataset, there two numerical variables: `size_in_m2` and `rental_price` . Consider the rental_price variable:
+
+```{r hist, echo=TRUE}
+# construct histogram of rental_price
+hist(opensooq_apartments$rental_price)
+```
+
+-   ***Customize Histogram:*** The histogram can be customized by changing the title, labels, colors and number of classes. These features can be added inside the hist() function. To know more about the function type `help("hist")` in the console.
+
+-   **Extract Information from Histogram:** The histogram graph can be assigned to an object and call information from it such as: class boundaries, midpoints, frequencies.
+
+    ```{r customize-hist, echo=TRUE}
+    ## customize the histogram and assign it to an object
+    hist_price <- hist(opensooq_apartments$rental_price, 
+         breaks= 5, #classes
+         col= "royalblue", #color
+         main= "Histogram of the Apartment Rental Price in Oman",  #title
+         xlab="prices (OMR)", # x-axis label 
+         ylab="No.of.apartments") # y-axis label
+    ## display histogram information 
+    hist_price
+    ```
+
+`hist_price$breaks` represents the classes with left-closed, right-open intervals, i.e. [0,200), [200,400), ..etc. `hist_price$counts` represents the frequencies, i.e. number of data points in each class. `hist_price$mids` represents the midpoints.
+
+**4.2. Frequency Polygon:** The midpoints and frequencies are required to construct a frequency ploygon. Recall that one class is added below the lowest value and one above the highest value so the the polygon touches the x-axis on both sides. Thus, the midpoints and frequencies found from the histogram need a slight adjustment to be used in graphing polygon. Then `plot()` function can be used to plot the polygon.
+
+```{r polygon, ech=TRUE}
+class_width <- hist_price$mids[2]-hist_price$mids[1] #class width
+mid_below_min <- min(hist_price$mids)-class_width #class below min
+mid_above_max <- max(hist_price$mids)+class_width  #class above max
+# combine the created midpoints with the existing midpoints
+midpoints <- c(mid_below_min, hist_price$mids , mid_above_max) 
+# combine the frequencies (0) of the created classes with the existing frequencies
+frequency <- c(0, hist_price$counts , 0) 
+# plot the polygon 
+plot(midpoints, frequency, 
+     #type of graph, 
+     #b: points connected with lines
+     #p: points
+     #l: line
+     type="b", #try to use "l" 
+     col= "Darkred", #color
+     main= "Distribution of the Apartment Rental Price in Oman",  #title
+     xlab="prices (OMR)", # x-axis label 
+     ylab="No.of.apartments") # y-axis label
+```
+
+**4.3. Cumulative Frequency Graph (Ogive):** The breaks and cumulative frequencies are required to construct an ogive. To calculate the cumulative frequency use `cumsum()` function.
+
+```{r ogive, echo=TRUE}
+# calculate the cummulative 
+CumFreq <- cumsum(hist_price$counts)
+## add 0 to the cummulative frequency 
+## indicating there is no values less than the minimum
+## use c() to combine 0 with the calculated CumFreq
+CumFreq <- c(0, CumFreq)
+ # plot the ogive
+plot(hist_price$breaks, CumFreq, 
+     type="l", #try to use "b" 
+     col= "purple", #color
+     main= "Cummulative Distribution of the Apartment Rental Price in Oman",  #title
+     xlab="prices (OMR)", # x-axis label 
+     ylab="No.of.apartments") # y-axis label
+```
+
+-   **Relative Frequency Graphs:** The relative frequency histogram, relative frequency polygon and cumulative relative frequency can be constructed using relative frequency calculation with `prop.table()` function. For example construct cumulative relative frequency graph and compare the y-axis of the graph with previous plot.
+
+    ```{r ogive-perc, echo=TRUE}
+    ## calculate cumulative relative frequency
+    Cum_Rel_Freq <- prop.table(CumFreq)*100
+     # plot the ogive
+    plot(hist_price$breaks, Cum_Rel_Freq, 
+         type="l", #try to use "b" 
+         col= "deepskyblue4", #color
+         main= "Cummulative Distribution of the Apartment Rental Price in Oman",  #title
+         xlab="prices (OMR)", # x-axis label 
+         ylab="% apartments") # y-axis label
+    ```
+
+-   **Grouped Frequency Distribution:** The information obtained from the histogram can be used to form the frequency distribution.
+
+    ```{r g-freq-dist, echo=TRUE}
+    ## identify the breaks!
+    breaks <- c("[0-200)", "[200-400)", "[400-600)", "[600-800)", "[800-1000)")
+    ## use data.frame to construct the frequency distribution
+    data.frame(breaks,
+               Freq=hist_price$counts,
+               Midpoints=hist_price$mids, 
+               Percentage=prop.table(hist_price$counts)*100,
+               Cum.Percentage=cumsum(prop.table(hist_price$counts))*100)
+    ```
+
+##### Practice Exercise:
+
+> Construct Frequency Histogram, Relative Frequency Polygon and Cumulative Relative Frequency Ogive for the variable `size_in_m2`.
+
+**4.4. Other** **Graphs**
+
+**4.4.1 Bar Graph:** The bar graph is widely used in practice to display non-numerical data. The base R function that is used to plot bar graphs is `barplot()` with two main arguments: `height` which takes numerical values that describe the length of the bar and the `names.arg` which takes the categories. Thus, the numerical values must be factorized by categorical levels. For more arguments run `help("barplot")` in the console.
+
+-   **Simple Bar Graph:** Consider `city_table` that generated above. It summarizes the city names in 8 levels in `city_table$City`. The frequency and relative frequency of each level were calculated in `city_table$Freq` and `city_table$Percentage`.
+
+```{r barplot-Freq, echo=TRUE}
+#plot bar graph
+barplot(city_table$Freq, names.arg=city_table$City,
+        xlab="City", # x-axis label
+        ylab="No.of.apartments",# y-axis label
+        main="Distribution of Appartments by Cities",#title
+        col="darksalmon",#color 
+        cex.names=0.5)#size of names below bars. Exclude it or change the value! 
+```
+
+-   **Ordered Bar Graph:** The bars can be arranged from highest to lowest by plotting the ordered tabulated data. Use `order()` function to order the data.
+
+```{r ordered-bargraph, echo=TRUE}
+## order city table by Frequency column
+order_city_table<- city_table[order(city_table$Freq,decreasing = TRUE),]
+#plot ordered bar graph
+barplot(order_city_table$Freq, names.arg=order_city_table$City,
+        xlab="City", # x-axis label
+        ylab="No.of.apartments",# y-axis label
+        main="Distribution of Appartments by Cities",#title
+        col="darksalmon",#color 
+        cex.names=0.5)#size of names below bars. 
+```
+
+##### Exercise:
+
+> Plot a bar graph that shows the percentage distribution of apartments by city.
+
+-   **Grouped Bar Graph:** The bars can be split into groups to show two or more quantities.
+
+```{r grouped-table, echo=TRUE}
+## construct a table with two non-numerical variables:city & furnished
+city_furnished_table <- table(opensooq_apartments$furnished, opensooq_apartments$city)
+## print the table
+city_furnished_table
+```
+
+```{r grouped-barplot-Freq, echo=TRUE}
+## plot grouped barplot
+barplot(city_furnished_table , 
+        xlab = "Application", # x-axis label
+        ylab="Frequency", # y-axis label
+        main = "Distribution of Appartments by Cities and Furnished Status ",
+        col = c("lightblue4", "lightpink4", "khaki"), #colors
+        beside = TRUE, ## try beside = FALSE
+        cex.names=0.5, #size of names below bars 
+        legend.text = rownames(city_furnished_table), #furnished status levels
+        args.legend = list(title = "Appartments Status",   
+                           x = "topleft",
+                           cex=0.7, 
+                           bty = "n")#legend adjustments, see help("legend")
+        )
+```
+
+**4.4.2 Pie Chart:** The pie chart is used to display non-numerical data with few categorical levels. The R base function for plotting pie chart is `pie()`. The function takes a main argument x: numerical values that display the areas of pie slices. The values can be frequencie, percentages or quantities. Consider `opensooq_apartments$furnished` variable with three levels. To show the variable in a pie chart, tabulate the variable first using `table()` function.
+
+```{r pie-chart, echo=TRUE}
+# frequency distribution with catgeory and frequency
+furnished_table <- transform(table(Furnished=opensooq_apartments$furnished))
+## add relative frequency to furnished_table
+furnished_table$percent <- round(prop.table(furnished_table$Freq)*100,0)
+furnished_table
+## plot the pie chart
+pie(furnished_table$percent,
+    col=c("lightblue4", "lightpink4", "khaki"),
+    main = "Appartments Status Distribution")
+
+```
+
+To customize labels, you can add `labels` argument with `paste()` function.
+
+```{r pie-chart-Perc, echo=TRUE}
+## change labels and add % to labels
+pie(furnished_table$Freq,
+    labels = paste(furnished_table$Furnished, furnished_table$percent, "%"),
+    col = c("lightblue4", "lightpink4", "khaki"), 
+    main="Appartments Status Distribution")
+```
+
+**4.4.3 Stem and Leaf Plot:** The stem and leaf plot summarizes numerical variable and keeps its original values. The R base function to construct steam and leaf is `stem()` function. To illustrate the stem and leaf display, consider subset of `opensooq_apartments$rental_price` variable, for example the first 50 observations.
+
+```{r stem-leaf, echo=TRUE}
+## plot stem and leaf of rental_price
+## scale= 1 (defualt: single stem)
+## scale=2 (double stem)
+stem(opensooq_apartments$rental_price[1:50], scale = 1) 
+```
+
+The data graphics are the art of statistics for exploring the beauty of data and drive value from it. Here we have presented some common graphs but there are many to explore: some can be visulized using the R base functions, where others require some packages. You can find a collection of R graphs and charts in the <a href="https://r-graph-gallery.com/" target="_blank">R Graph Gallery</a>.
+
+##  Data Exploration II
+
+5.  **Data Description [Under Construction!]**
